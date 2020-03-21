@@ -2,7 +2,7 @@
 
 Newsbox er et praktik projekt hvor du skal udvikle en nyhedsindbakke som henter indhold fra DR.
 
-Oblikatorisk:
+Oblikatorisk: (Se ekstra opgaver nederst)
 1. Tidsestimering
 2. Datakonvertering
 3. Animationer
