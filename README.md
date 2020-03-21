@@ -5,8 +5,8 @@ I denne praktikperiode skal I udvikle en nyheds webapplikation som er optimeret 
 You tell me how much time you need!!!
 
 **Målet med opgaven er:**<br>
-At få arbejdet med et CSS framework og få gjort sig nogen erfaring med et sådanne i et praktisk projekt.
-At få erfaring med data konvertering så I kan præsentere data fra tredjepart services som ikke leverer data i XML format.
+At få arbejdet med et CSS framework og få gjort sig nogen erfaringer med et sådanne i et praktisk projekt.
+At få erfaring med data konvertering så I kan præsentere data fra tredjepart services som ikke leverer data i JSON format.
 At arbejde med lagring af indstillinger og data.
 
 **Udfordringen er:**<br>
