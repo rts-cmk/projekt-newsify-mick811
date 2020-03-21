@@ -15,30 +15,29 @@ Listevisning (toggle)
 On/Off Switches 
 
 
-** CSS Framework ** 
+**CSS Framework** <br>
 Du skal udvikle applikationens UI med Tailwind CSS
 
-** Product backlog: **
+**Product backlog:** <br>
 tidsestimering
 
-** Datakonverterings sandbox: **
-DR's nyhedsdata kommer i XML ![XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at få konvateret data fra XMLformat til JSON-.
+**Datakonverterings sandbox:** <br>
+DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at få konvateret data fra XMLformat til JSON-.
 Her er lidt ressourcer som kan hjælpe jer:
 https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
 https://dev.to/niinpatel/converting-xml-to-json-using-recursion-2k4j
 
-Tip:
+**Tip:**<br>
 Opret en fil hvor du kan ekspermantere med at konvertere data fra XML til JSON. Når du har fået tingende til at virke i det sikre sandbox miljø, er du klar til at implementere løsningen i applikationen.
 datakonvertering
 
-Ekstra:
+**Ekstra:**<br>
 1. Tilføj Swipe-down to refresh på nyhedsliste 
     (https://www.tapsmart.com/wp-content/uploads/2015/06/pull-to-refresh-823x1024.png)
 2. Feature med tutorial første gang appen bruges
 
 
-** Hjælp!!! **
-
+**Hjælp!!!**<br>
 StackOverflow:
 På 'stacken' har I mulighed for at hjælpe eller få hjælpe fra hinanden og skolens undervisere.
 https://stackoverflow.com/c/rts-cmk/questions
