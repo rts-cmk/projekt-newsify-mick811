@@ -34,8 +34,8 @@ Gulp(build system)<br>
    Tidsestemering
    
 2. **Datakonvertering**
-
-   DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at      få konvateret data fra XML- til JSON format.
+ 
+   DR's nyheder er tilgængelige i RSS-feeds som er en [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML)-fil der        distribueres af DR's webserver. Nyhedsdata leveres altså ikke i JSON format og det er derfor nødvendigt at få konvateret      data fra XML- til JSON format for at I kan arbejde med data-præsentation som i plejer.
 
    Her er lidt ressourcer som kan hjælpe jer:
       1. https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
