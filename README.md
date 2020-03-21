@@ -2,7 +2,7 @@
 I denne praktikperiode skal I udvikle en nyheds webapplikation som er optimeret til den mobile skærm. I applikationen skal der listes nyheder fra DR.dk i et kategoriseret nyhedsoverblik. Det skal være muligt at vælge(klikke på) en nyhed i liste, for at se denne i sin fulde længde og herfra gemme den aktuelle nyhedsartikkel i et privat nyhedskartotek. Fra et settings-panel skal brugeren have mulighed for at administrere det kategoriseret nyhedsoverblik ved at slå visning til og fra på udvalgte nyhedskategorier.
 
 **Varighed:**<br>
-you tell me how much time you need!!!
+You tell me how much time you need!!!
 
 **Målet med opgaven er:**<br>
 At få arbejdet med et CSS framework og få gjort sig nogen erfaring med et sådanne i et praktisk projekt.
