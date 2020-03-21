@@ -33,8 +33,8 @@ Opret en fil hvor du kan ekspermantere med at konvertere data fra XML til JSON. 
 datakonvertering
 
 ## Ekstra opgaver
-1. Tilføj Swipe-down to refresh på nyhedsliste 
-    [Se illustraion:](https://www.tapsmart.com/wp-content/uploads/2015/06/pull-to-refresh-823x1024.png "swipe-down")
+1. Tilføj Swipe-down to refresh på nyhedsliste:
+    [se illustraion:](https://www.tapsmart.com/wp-content/uploads/2015/06/pull-to-refresh-823x1024.png "swipe-down")
 2. Feature med tutorial første gang appen bruges
 
 
