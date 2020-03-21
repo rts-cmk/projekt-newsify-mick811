@@ -8,6 +8,7 @@ You tell me how much time you need!!!
 At få arbejdet med et CSS framework og få gjort sig nogen erfaringer med et sådanne i et praktisk projekt.
 At få erfaring med data konvertering så I kan præsentere data fra tredjepart services som ikke leverer data i JSON format.
 At arbejde med lagring af indstillinger og data.
+At kommunikere med hinanden omkring faglige problemstillinger både på skrift og i virtuelle møder.
 
 **Udfordringen er:**<br>
 Det er selvfølgelig en udfordring at vi ikke på samme måde som normalt har mulighed for vejledning på skolen. Jeg har derfor
