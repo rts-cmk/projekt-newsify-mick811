@@ -64,8 +64,8 @@ Se XD fil i mappen projekt-UI.
 
 
 
-## Ekstra opgaver
-Husk at ekstra opgaver ikke er valgfrie opgaver! Jeg forventer at du begynder at udvikle nedenstående fetures, når du er færdig med de oblikatoriske opgaver. Husk også at jo flere features du har med i projektet, jo federe er det at vise frem i sit portfolio.
+## Nice to have opgaver
+Husk at 'nice-to-have' opgaverne ikke er valgfrie opgaver! Jeg forventer at du begynder at udvikle nedenstående fetures, når du er færdig med de oblikatoriske opgaver. Husk også at jo flere features du har med i projektet, jo federe er det at vise frem i sit portfolio.
 
 1. Tilføj Swipe-down to refresh på nyhedsliste:
     [se illustraion](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/pull-to-refresh-823x1024.png "swipe-down")
