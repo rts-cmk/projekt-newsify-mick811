@@ -20,7 +20,7 @@ Se XD fil i mappen projekt-UI.
 
 **Applikations tech stack:**<br>
 HTML(structure)<br>
-Tailwind CSS(style)<br>
+Tailwind CSS(UI components)<br>
 JavaScript(logic)<br>
 Anime.js(Animations)<br>
 Animate.css(Animations)<br>
