@@ -13,22 +13,24 @@ Det er selvfølgelig en udfordring at vi ikke på samme måde som normalt har mu
 lavet en "sådan hjælper du andre og sådan kan du spørge om hjælp" liste. 
 Du finder listen  i slutningen af denne readme.
 
-## Opgavebeskrivelse og materiale
+## Applikations tech stack
 
-**User Interface:**<br>
-Se XD fil i mappen projekt-UI.
-
-**Applikations tech stack:**<br>
 HTML(structure)<br>
 Tailwind CSS(UI components)<br>
-JavaScript(logic)<br>
+JavaScript(logic / data collection)<br>
 Anime.js(Animations)<br>
 Animate.css(Animations)<br>
 Ejs(view engine)<br>
 Netlify(host)<br>
 Gulp(build system)<br>
 
+## Opgavebeskrivelse og materiale
+
+**User Interface:**<br>
+Se XD fil i mappen projekt-UI.
+
 ### Oblikatorisk opgaver:
+
 1. **Product backlog**
 
    Tidsestemering
@@ -45,17 +47,17 @@ Gulp(build system)<br>
    Opret en fil hvor du kan ekspermantere med at konvertere data fra XML til JSON. Når du har fået tingende til at virke i det    sikre sandbox miljø, er du klar til at implementere løsningen i applikationen.
    datakonvertering 
    
-3. Animationer
+3. **Animationer**
 
    En nyhedskategori kan være "åben", så de relaterede artikler fremgår af en liste herunder. En nyhedskategori kan også være    "lukket", sådan at det kun er nyhedskategorien som fremgår af listen men ikke de relaterede artiker. Det er din opgave at      animere overgangen mellem "åben" / "lukket" tilstand på en lækker måde.
  
    I settingspanelt kan man "tænde og slukke" for nyhedskategorier. Det er din opgave at animere kontakternes overgang fra        "tænt" til "slukket".
  
-4. CSS Framework
+4. **UI komponenter**
 
    Du skal udvikle applikationens UI komponenter med frameworket tailwindcss.
 
-5. Deploy on Netlify
+5. **Deploy on Netlify**
 
    Din webapplikation skal udgives på Netlify.
 
