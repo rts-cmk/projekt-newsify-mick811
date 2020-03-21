@@ -1,4 +1,4 @@
-## Praktik opgave newsbox
+## Praktik opgave newsbox!
 
 Newsbox er et praktik projekt hvor du skal udvikle en nyhedsindbakke som henter indhold fra DR.
 
@@ -39,9 +39,6 @@ datakonvertering
 
 
 **Hjælp!!!**<br>
-StackOverflow:
-
-
 **StackOverflow:**
 På 'stacken' har I mulighed for at hjælpe eller få hjælpe fra hinanden og skolens undervisere.
 https://stackoverflow.com/c/rts-cmk/questions
