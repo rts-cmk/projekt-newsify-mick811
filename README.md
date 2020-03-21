@@ -13,7 +13,10 @@ Det er selvfølgelig en udfordring at vi ikke på samme måde som normalt har mu
 lavet en "sådan hjælper du andre og sådan kan du spørge om hjælp" liste. 
 Du finder listen  i slutningen af opgavebeskrivelsen.
 
-## Opgavebeskrivelse
+## Opgavebeskrivelse og materiale
+
+**User Interface:**<br>
+Se XD fil i mappen projekt-UI.
 
 **Applikations tech stack:**<br>
 HTML(structure)<br>
@@ -23,10 +26,7 @@ Ejs(view engine)<br>
 Netlify(host)<br>
 Gulp(build system)<br>
 
-**User Interface:**<br>
-Se XD fil i mappen projekt-UI.
-
-#### Oblikatorisk opgaver:
+### Oblikatorisk opgaver:
 1. **Product backlog**
 
    Tidsestemering
