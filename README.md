@@ -1,8 +1,6 @@
 ## Praktik opgave newsbox!
 I denne praktikperiode skal I udvikle en nyheds webapplikation som er optimeret til den mobile skærm. I applikationen skal der listes nyheder fra DR.dk i et kategoriseret nyhedsoverblik. Det skal være muligt at vælge(klikke på) en nyhed i liste, for at se denne i sin fulde længde og herfra gemme den aktuelle nyhedsartikkel i et privat nyhedskartotek. Fra et settings-panel skal brugeren have mulighed for at administrere det kategoriseret nyhedsoverblik ved at slå visning til og fra på udvalgte nyhedskategorier.
 
-**UI:**<br>
-Du finder en XD fil i mappen projekt-UI.
 
 **Målet med opgaven er:**<br>
 At få arbejdet med et CSS framework og gjort sig nogen erfaring med et sådanne i et praktisk projekt.
@@ -16,12 +14,25 @@ lavet en "sådan hjælper du andre og sådan kan du spørge om hjælp" liste.
 Du finder listen  i slutningen af opgavebeskrivelsen.
 
 ## Opgavebeskrivelse
-**Oblikatorisk:** (Se ekstra opgaver nederst)<br>
-1. Tidsestimering
+
+**User Interface:**<br>
+Se XD fil i mappen projekt-UI.
+
+**Oblikatorisk opgaver:**
+1. Tidsestimering (projekt backlog)
 2. Datakonvertering
+
+   DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at      få konvateret data fra XMLformat til JSON-.
+
+   Her er lidt ressourcer som kan hjælpe jer:
+   https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
+   https://dev.to/niinpatel/converting-xml-to-json-using-recursion-2k4j
+
 3. Animationer
 4. CSS Framework
 5. Deploy in netlify
+
+**Ekstra opgaver:**
 
 
 **Animationer** <br>
@@ -35,12 +46,6 @@ Du skal udvikle applikationens UI med Tailwind CSS
 **Product backlog:** <br>
 tidsestimering
 
-**Datakonverterings sandbox:** <br>
-DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at få konvateret data fra XMLformat til JSON-.
-
-Her er lidt ressourcer som kan hjælpe jer:
-https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
-https://dev.to/niinpatel/converting-xml-to-json-using-recursion-2k4j
 
 **Tip:**<br>
 Opret en fil hvor du kan ekspermantere med at konvertere data fra XML til JSON. Når du har fået tingende til at virke i det sikre sandbox miljø, er du klar til at implementere løsningen i applikationen.
