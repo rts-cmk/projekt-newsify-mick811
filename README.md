@@ -29,7 +29,7 @@ Se XD fil i mappen projekt-UI.
    
 3. Animationer
 
-   En nyhedskategori kan være "åben", så de relaterede artikler fremgår af en liste herunder. En nyhedskategori kan også være    "lukket", sådan at det kun er nyhedskategorien som fremgår af listen, men ikke de relaterede artiker. Det er din opgave at    animere overgangen mellem åben/lukket på en lækker måde.
+   En nyhedskategori kan være "åben", så de relaterede artikler fremgår af en liste herunder. En nyhedskategori kan også være    "lukket", sådan at det kun er nyhedskategorien som fremgår af listen men ikke de relaterede artiker. Det er din opgave at    animere overgangen mellem "åben" / "lukket" tilstand på en lækker måde.
  
    I settingspanelt kan man "tænde og slukke" for nyhedskategorier. Det er din opgave at animere kontakternes overgang fra        "tænt" til "slukket".
  
