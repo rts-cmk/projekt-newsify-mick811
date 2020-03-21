@@ -1,22 +1,22 @@
 ## Praktik opgave newsbox!
 I denne praktikperiode skal I udvikle en nyheds webapplikation som er optimeret til den mobile skærm. I applikationen skal der listes nyheder fra DR.dk i et kategoriseret nyhedsoverblik. Det skal være muligt at vælge(klikke på) en nyhed i liste, for at se denne i sin fulde længde og herfra gemme den aktuelle nyhedsartikkel i et privat nyhedskartotek. Fra et settings-panel skal brugeren have mulighed for at administrere det kategoriseret nyhedsoverblik ved at slå visning til og fra på udvalgte nyhedskategorier.
 
-**UI:**
+**UI:**<br>
 Du finder en XD fil i mappen projekt-UI.
 
-**Målet med opgaven er:**
+**Målet med opgaven er:**<br>
 At få arbejdet med et CSS framework og gjort sig nogen erfaring med et sådanne i et praktisk projekt.
 At få erfaring med data konvertering så I kan præsentere data fra tredjepart services som ikke leverer data i XML format.
 At arbejde med lagring af indstillinger og data.
 
 
-**Udfordringen er:**
+**Udfordringen er:**<br>
 Det er selvfølgelig en udfordring at vi ikke på samme måde som normalt har mulighed for vejledning på skolen. Jeg har derfor
 lavet en "sådan hjælper du andre og sådan kan du spørge om hjælp" liste. 
 Du finder listen  i slutningen af opgavebeskrivelsen.
 
 
-**Oblikatorisk:** (Se ekstra opgaver nederst)
+**Oblikatorisk:** (Se ekstra opgaver nederst)<br>
 1. Tidsestimering
 2. Datakonvertering
 3. Animationer
@@ -24,7 +24,7 @@ Du finder listen  i slutningen af opgavebeskrivelsen.
 5. Deploy in netlify
 
 
-** Animationer **
+**Animationer** <br>
 Listevisning (toggle)
 On/Off Switches 
 
