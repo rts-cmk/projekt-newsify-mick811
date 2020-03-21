@@ -21,7 +21,7 @@ Se XD fil i mappen projekt-UI.
 1. Tidsestimering (projekt backlog)
 2. Datakonvertering
 
-   DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at      få konvateret data fra XMLformat til JSON-.
+   DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at      få konvateret data fra XML- til JSON format.
 
    Her er lidt ressourcer som kan hjælpe jer:
       https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
