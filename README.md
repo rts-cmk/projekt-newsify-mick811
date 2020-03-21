@@ -27,11 +27,11 @@ Gulp(build system)<br>
 Se XD fil i mappen projekt-UI.
 
 #### Oblikatorisk opgaver:
-1. Product backlog 
+1. **Product backlog**
 
    Tidsestemering
    
-2. Datakonvertering
+2. **Datakonvertering**
 
    DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at      få konvateret data fra XML- til JSON format.
 
