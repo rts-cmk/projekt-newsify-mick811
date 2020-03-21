@@ -22,6 +22,8 @@ Se XD fil i mappen projekt-UI.
 HTML(structure)<br>
 Tailwind CSS(style)<br>
 JavaScript(logic)<br>
+Anime.js(Animations)<br>
+Animate.css(Animations)<br>
 Ejs(view engine)<br>
 Netlify(host)<br>
 Gulp(build system)<br>
