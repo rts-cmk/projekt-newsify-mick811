@@ -35,7 +35,6 @@ Se XD fil i mappen projekt-UI.
  
 4. CSS Framework
 5. Deploy in netlify
-6. Nyhedskategorier (Ryk op ned i settings)
 
 **Ekstra opgaver:**
 Søgefunktion
@@ -60,6 +59,7 @@ datakonvertering
 1. Tilføj Swipe-down to refresh på nyhedsliste:
     [se illustraion](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/pull-to-refresh-823x1024.png "swipe-down")
 2. Feature med tutorial første gang appen bruges: [se illustration](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/tutorial.png "tutorial")
+3. Tilføj muligheden for at redigere rækkefølgende på kategorier i settings.
 
 
 ## Se her hvis du får brug for hjælp
