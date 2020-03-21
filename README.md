@@ -15,7 +15,7 @@ Det er selvfølgelig en udfordring at vi ikke på samme måde som normalt har mu
 lavet en "sådan hjælper du andre og sådan kan du spørge om hjælp" liste. 
 Du finder listen  i slutningen af opgavebeskrivelsen.
 
-
+## Opgavebeskrivelse
 **Oblikatorisk:** (Se ekstra opgaver nederst)<br>
 1. Tidsestimering
 2. Datakonvertering
