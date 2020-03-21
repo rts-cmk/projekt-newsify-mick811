@@ -16,12 +16,12 @@ Du finder listen  i slutningen af opgavebeskrivelsen.
 ## Opgavebeskrivelse
 
 **Applikations tech stack:**
-HTML(structure)
-Tailwind CSS(style)
-JavaScript(logic)
-Ejs(view engine)
-Netlify(host)
-Gulp(build system)
+HTML(structure)<br>
+Tailwind CSS(style)<br>
+JavaScript(logic)<br>
+Ejs(view engine)<br>
+Netlify(host)<br>
+Gulp(build system)<br>
 
 **User Interface:**<br>
 Se XD fil i mappen projekt-UI.
