@@ -17,10 +17,9 @@ Du finder listen  i slutningen af opgavebeskrivelsen.
 
 **User Interface:**<br>
 Se XD fil i mappen projekt-UI.
-
-**Oblikatorisk opgaver:**
-1. Tidsestimering (projekt backlog)
-2. Datakonvertering
+### Oblikatorisk opgaver:
+**1. Tidsestimering (projekt backlog)**
+**2. Datakonvertering**
 
    DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at      få konvateret data fra XMLformat til JSON-.
 
