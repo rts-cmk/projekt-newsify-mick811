@@ -15,7 +15,7 @@ Du finder listen  i slutningen af opgavebeskrivelsen.
 
 ## Opgavebeskrivelse
 
-**Applikations tech stack:**
+**Applikations tech stack:**<br>
 HTML(structure)<br>
 Tailwind CSS(style)<br>
 JavaScript(logic)<br>
