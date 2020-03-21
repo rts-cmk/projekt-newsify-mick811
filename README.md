@@ -38,7 +38,7 @@ datakonvertering
 2. Feature med tutorial første gang appen bruges: [se illustration](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/tutorial.png "tutorial")
 
 
-## Hjælp!!!
+## Se her hvis du får brug for hjælp
 **StackOverflow:**<br>
 På 'stacken' har I mulighed for at hjælpe eller få hjælpe fra hinanden og skolens undervisere.
 https://stackoverflow.com/c/rts-cmk/questions
