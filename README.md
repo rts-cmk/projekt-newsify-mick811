@@ -34,8 +34,8 @@ datakonvertering
 
 ## Ekstra opgaver
 1. Tilføj Swipe-down to refresh på nyhedsliste:
-    [se illustraion:](https://www.tapsmart.com/wp-content/uploads/2015/06/pull-to-refresh-823x1024.png "swipe-down")
-2. Feature med tutorial første gang appen bruges
+    [se illustraion:](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/pull-to-refresh-823x1024.png "swipe-down")
+2. Feature med tutorial første gang appen bruges: [Se illustration:](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/tutorial.png "tutorial")
 
 
 ## Hjælp!!!
