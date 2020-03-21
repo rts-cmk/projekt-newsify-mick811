@@ -15,45 +15,50 @@ Du finder listen  i slutningen af opgavebeskrivelsen.
 
 ## Opgavebeskrivelse
 
+**Applikations tech stack:**
+HTML(structure)
+Tailwind CSS(style)
+JavaScript(logic)
+Ejs(view engine)
+Netlify(host)
+Gulp(build system)
+
 **User Interface:**<br>
 Se XD fil i mappen projekt-UI.
+
 #### Oblikatorisk opgaver:
-1. Tidsestimering (projekt backlog)
+1. Product backlog 
+
+   Tidsestemering
+   
 2. Datakonvertering
 
    DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at      få konvateret data fra XML- til JSON format.
 
    Her er lidt ressourcer som kan hjælpe jer:
-      https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
-      https://dev.to/niinpatel/converting-xml-to-json-using-recursion-2k4j
+      1. https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
+      2. https://dev.to/niinpatel/converting-xml-to-json-using-recursion-2k4j
+      
+   **TIP:**
+   Opret en fil hvor du kan ekspermantere med at konvertere data fra XML til JSON. Når du har fået tingende til at virke i det    sikre sandbox miljø, er du klar til at implementere løsningen i applikationen.
+   datakonvertering 
    
 3. Animationer
 
-   En nyhedskategori kan være "åben", så de relaterede artikler fremgår af en liste herunder. En nyhedskategori kan også være    "lukket", sådan at det kun er nyhedskategorien som fremgår af listen men ikke de relaterede artiker. Det er din opgave at    animere overgangen mellem "åben" / "lukket" tilstand på en lækker måde.
+   En nyhedskategori kan være "åben", så de relaterede artikler fremgår af en liste herunder. En nyhedskategori kan også være    "lukket", sådan at det kun er nyhedskategorien som fremgår af listen men ikke de relaterede artiker. Det er din opgave at      animere overgangen mellem "åben" / "lukket" tilstand på en lækker måde.
  
    I settingspanelt kan man "tænde og slukke" for nyhedskategorier. Det er din opgave at animere kontakternes overgang fra        "tænt" til "slukket".
  
 4. CSS Framework
-5. Deploy in netlify
 
-**Ekstra opgaver:**
-Søgefunktion
+   Du skal udvikle applikationens UI komponenter med frameworket tailwindcss.
 
-**Animationer** <br>
-Listevisning (toggle)
-On/Off Switches 
+5. Deploy on Netlify
+
+   Din webapplikation skal udgives på Netlify.
 
 
-**CSS Framework** <br>
-Du skal udvikle applikationens UI med Tailwind CSS
 
-**Product backlog:** <br>
-tidsestimering
-
-
-**Tip:**<br>
-Opret en fil hvor du kan ekspermantere med at konvertere data fra XML til JSON. Når du har fået tingende til at virke i det sikre sandbox miljø, er du klar til at implementere løsningen i applikationen.
-datakonvertering
 
 ## Ekstra opgaver
 1. Tilføj Swipe-down to refresh på nyhedsliste:
