@@ -11,7 +11,7 @@ At arbejde med lagring af indstillinger og data.
 **Udfordringen er:**<br>
 Det er selvfølgelig en udfordring at vi ikke på samme måde som normalt har mulighed for vejledning på skolen. Jeg har derfor
 lavet en "sådan hjælper du andre og sådan kan du spørge om hjælp" liste. 
-Du finder listen  i slutningen af opgavebeskrivelsen.
+Du finder listen  i slutningen af denne readme.
 
 ## Opgavebeskrivelse og materiale
 
