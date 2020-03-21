@@ -38,7 +38,7 @@ datakonvertering
 2. Feature med tutorial første gang appen bruges
 
 
-**Hjælp!!!**<br>
+## Hjælp!!!
 **StackOverflow:**
 På 'stacken' har I mulighed for at hjælpe eller få hjælpe fra hinanden og skolens undervisere.
 https://stackoverflow.com/c/rts-cmk/questions
