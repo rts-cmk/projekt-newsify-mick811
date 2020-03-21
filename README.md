@@ -32,7 +32,7 @@ https://dev.to/niinpatel/converting-xml-to-json-using-recursion-2k4j
 Opret en fil hvor du kan ekspermantere med at konvertere data fra XML til JSON. Når du har fået tingende til at virke i det sikre sandbox miljø, er du klar til at implementere løsningen i applikationen.
 datakonvertering
 
-**Ekstra:**<br>
+## Ekstra opgaver
 1. Tilføj Swipe-down to refresh på nyhedsliste 
     (https://www.tapsmart.com/wp-content/uploads/2015/06/pull-to-refresh-823x1024.png)
 2. Feature med tutorial første gang appen bruges
