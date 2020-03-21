@@ -45,8 +45,7 @@ Se XD fil i mappen projekt-UI.
       2. https://dev.to/niinpatel/converting-xml-to-json-using-recursion-2k4j
       
    **TIP:**
-   Opret en fil hvor du kan ekspermantere med at konvertere data fra XML til JSON. Når du har fået tingende til at virke i det    sikre sandbox miljø, er du klar til at implementere løsningen i applikationen.
-   datakonvertering 
+   Opret et sandbox miljø hvor du kan ekspermantere med at konvertere data fra XML til JSON før du implementerer i projektet.
    
 3. **Animationer**
 
