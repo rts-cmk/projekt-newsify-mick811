@@ -23,6 +23,7 @@ tidsestimering
 
 **Datakonverterings sandbox:** <br>
 DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at få konvateret data fra XMLformat til JSON-.
+
 Her er lidt ressourcer som kan hjælpe jer:
 https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
 https://dev.to/niinpatel/converting-xml-to-json-using-recursion-2k4j
@@ -39,17 +40,18 @@ datakonvertering
 
 **Hjælp!!!**<br>
 StackOverflow:
+
+
+**StackOverflow:**
 På 'stacken' har I mulighed for at hjælpe eller få hjælpe fra hinanden og skolens undervisere.
 https://stackoverflow.com/c/rts-cmk/questions
 
 Det er et **krav** at i bruger *"Hvordan stiller jeg et godt spørgsmål?"* når i stiller spørgsmål.
 https://stackoverflow.com/help/how-to-ask
 
-
-Teams:
+**Teams:**
 I kan også holde møder på Skype for business, hvis i skal diskutere en problemstilling. I kan dele jeres skærm og i kan sågar fjernstyre hinandens maskiner, hvis det er nødvendigt at hjælpe med for eksempel debugging.
 https://teams.microsoft.com/l/channel/19%3a1b3dcaedd4b44f3b9a84e6b19377f71e%40thread.tacv2/Generel?groupId=856d6686-7cf1-44f0-a45b-e96706667d75&tenantId=b99bf9e9-f5ba-4922-9c48-3b1458bd8136
 
-
-Live share:
+**Live share:**
 Denne VSCode extensions giver jer ligeledes mulighed for at dele udviklingsmiljø med hinanden.
