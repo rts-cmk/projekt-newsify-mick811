@@ -1,12 +1,13 @@
 ## Praktik opgave newsbox!
 I denne praktikperiode skal I udvikle en nyheds webapplikation som er optimeret til den mobile skærm. I applikationen skal der listes nyheder fra DR.dk i et kategoriseret nyhedsoverblik. Det skal være muligt at vælge(klikke på) en nyhed i liste, for at se denne i sin fulde længde og herfra gemme den aktuelle nyhedsartikkel i et privat nyhedskartotek. Fra et settings-panel skal brugeren have mulighed for at administrere det kategoriseret nyhedsoverblik ved at slå visning til og fra på udvalgte nyhedskategorier.
 
+**Varighed:**
+you tell me how much time you need!!!
 
 **Målet med opgaven er:**<br>
 At få arbejdet med et CSS framework og få gjort sig nogen erfaring med et sådanne i et praktisk projekt.
 At få erfaring med data konvertering så I kan præsentere data fra tredjepart services som ikke leverer data i XML format.
 At arbejde med lagring af indstillinger og data.
-
 
 **Udfordringen er:**<br>
 Det er selvfølgelig en udfordring at vi ikke på samme måde som normalt har mulighed for vejledning på skolen. Jeg har derfor
@@ -72,6 +73,11 @@ Husk at 'nice-to-have' opgaverne ikke er valgfrie opgaver! Jeg forventer at du b
 2. Feature tutorial første gang appen bruges: [se illustration](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/tutorial.png "tutorial")
 3. Gør det muligt at redigere rækkefølgen på kategorier i settings.
 
+## Aflevering og evaluering
+Opgaven skal være færdig senest fredag d. 17/4 kl. 13:40. Dvs. at det sidste push inden sluttidspunktet udfør din aflevering. Dit projekt vil blive testet på en telefon, så det er vigtigt at du gør det samme, og ikke udelukkende tester i browserens emulator.
+
+**Min applikation er tilgængelig på følgende url:**
+Her skal du angive din webapplikations URL(Netlify) 
 
 ## Se her hvis du får brug for hjælp
 **StackOverflow:**<br>
