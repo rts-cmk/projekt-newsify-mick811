@@ -80,7 +80,7 @@ Her skal du angive din webapplikations URL(Netlify)
 
 ## Se her hvis du får brug for hjælp
 **StackOverflow:**<br>
-På 'stacken' har I mulighed for at hjælpe eller få hjælpe fra hinanden og skolens undervisere.
+På 'cmk-stacken' har I mulighed for at hjælpe eller få hjælpe fra hinanden og skolens undervisere.
 https://stackoverflow.com/c/rts-cmk/questions
 
 Det er et **krav** at i bruger *"Hvordan stiller jeg et godt spørgsmål?"* som guide for udformning af jeres spørgsmål.
