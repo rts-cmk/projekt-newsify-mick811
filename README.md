@@ -17,8 +17,8 @@ Du finder listen  i slutningen af opgavebeskrivelsen.
 
 **User Interface:**<br>
 Se XD fil i mappen projekt-UI.
-### Oblikatorisk opgaver:
-**1. Tidsestimering (projekt backlog)**
+#### Oblikatorisk opgaver:
+**1. Tidsestimering (projekt backlog)**<br>
 **2. Datakonvertering**
 
    DR's nyhedsdata kommer i [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML) format. Det er derfor nødvendigt at      få konvateret data fra XMLformat til JSON-.
@@ -26,13 +26,20 @@ Se XD fil i mappen projekt-UI.
    Her er lidt ressourcer som kan hjælpe jer:
    https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
    https://dev.to/niinpatel/converting-xml-to-json-using-recursion-2k4j
+   
+**x. Nyhedskategorier**
 
-3. Animationer
+**3. Animationer**
+
+ En nyhedskategori kan være "åben", så de relaterede artikler fremgår af en liste herunder. En nyhedskategori kan også være "lukket", sådan at det kun er nyhedskategorien som fremgår af listen, men ikke de relaterede artiker. Det er din opgave at animere overgangen mellem åben/lukket på en lækker måde.
+ 
+ I settingspanelt kan man "tænde og slukke" for nyhedskategorier. Det er din opgave at animere kontakternes overgang fra "tænt" til "slukket".
+ 
 4. CSS Framework
 5. Deploy in netlify
 
 **Ekstra opgaver:**
-
+Søgefunktion
 
 **Animationer** <br>
 Listevisning (toggle)
