@@ -57,11 +57,13 @@ Se XD fil i mappen projekt-UI.
 
    Du skal udvikle applikationens UI komponenter med frameworket tailwindcss.
 
-5. **Deploy on Netlify**
+5. **Funktioner**
+   
+   I settings-panelet skal brugeren have mulighed for at administrere det kategoriseret nyhedsoverblik ved at slå visning        til og fra på udvalgte nyhedskategorier. Det skal også være muligt at skifte mellem lyst og mørkt tema fra settings panelt    og applikationen skal "huske" indstillingerne. 
+
+6. **Deploy on Netlify**
 
    Din webapplikation skal udgives på Netlify.
-
-
 
 
 ## Nice to have opgaver
