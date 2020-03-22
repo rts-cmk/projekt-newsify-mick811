@@ -1,5 +1,7 @@
 ## Praktik opgave newsbox!
-I denne praktikperiode skal I udvikle en nyheds webapplikation som er optimeret til den mobile skærm. I applikationen skal der listes nyheder fra DR.dk i et kategoriseret nyhedsoverblik. Det skal være muligt at vælge(klikke på) en nyhed i liste, for at se denne i sin fulde længde og herfra gemme den aktuelle nyhedsartikkel i et privat nyhedskartotek. Fra et settings-panel skal brugeren have mulighed for at administrere det kategoriseret nyhedsoverblik ved at slå visning til og fra på udvalgte nyhedskategorier. Det skal også være muligt at skifte mellem lyst og mørkt tema fra settings panelt.
+I denne praktikperiode skal I udvikle en nyheds webapplikation som er optimeret til den mobile skærm. I applikationen skal der listes nyheder fra The New York times i et kategoriseret nyhedsoverblik. Det skal være muligt at vælge(klikke på) en nyhed i listen, hvorefter brugeren vil blive sendt videre til den fulde artikkel på nytimes.com.<br>
+Nyhedsartikkeler skal også kunne gemmes i et privat nyhedsarkiv. Gem funktionen bliver synlig når der swipes til venstre på en nyhed. Fra det private nyhedsarkiv kan ligeledes tilgås artikler og artikler kan slettes. Slet funktionen bliver synlig når der swipes til venstre på en arkiveret nyhed.<br>
+Fra et settings-panel skal brugeren have mulighed for at administrere det kategoriseret nyhedsoverblik ved at slå visning til og fra på udvalgte nyhedskategorier. Det skal også være muligt at skifte mellem lyst og mørkt tema fra settings panelt.
 
 **Varighed:**<br>
 You tell me how much time you need!!!
@@ -33,13 +35,13 @@ Se XD fil i mappen projekt-UI.
 
 ### Oblikatorisk opgaver:
 
-1. **Product backlog**
+1. **Projekt planlægning**
 
-   Tidsestemering
+   Dit projekt skal planlægges i et Kanban board som er tilknyttet dit projekt på GitHub. Se hvordan du sætter Kanban op på      dit Github projekt her: https://www.youtube.com/watch?v=1mnUlnQCkxs&list=PLX4-t8Zdi_Xp7E8v2S8fmLXPqYSvxK3nC&index=1
    
 2. **Datakonvertering**
  
-   DR's nyheder er tilgængelige i RSS-feeds som er en [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML)-fil der        distribueres af DR's webserver. Nyhedsdata leveres altså ikke i JSON format og det er derfor nødvendigt at få konvateret      data fra XML- til JSON format for at I kan arbejde med data-præsentation som i plejer.
+   The New York Times nyheder er tilgængelige i RSS-feeds som er en [XML](https://developer.mozilla.org/en-            US/docs/Glossary/XML)-fil der distribueres af TNYT webserver. Nyhedsdata leveres altså ikke i JSON format og det er derfor nødvendigt at få konvateret data fra XML- til JSON format for at I kan arbejde med data-præsentation som i plejer.
 
    Her er lidt ressourcer som kan hjælpe jer:
       1. https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
