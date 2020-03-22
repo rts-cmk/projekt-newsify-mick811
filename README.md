@@ -43,9 +43,10 @@ Se XD fil i mappen projekt-UI.
    
 2. **Datakonvertering**
  
-   The New York Times nyheder er tilgængelige i RSS-feeds som er en [XML](https://developer.mozilla.org/en-            US/docs/Glossary/XML)-fil der distribueres af TNYT webserver. Nyhedsdata leveres altså ikke i JSON format og det er derfor nødvendigt at få konvateret data fra XML- til JSON format for at I kan arbejde med data-præsentation som i plejer.
+   The New York Times nyheder er tilgængelige i RSS-feeds.
+   Et RSS-feed er en [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML)-fil der distribueres af TNYT's webserver.      Nyhedsdata leveres altså ikke i JSON format og det er derfor nødvendigt at få konvateret data fra XML- til JSON format for    at I kan arbejde med data-præsentation som i plejer.
 
-   Her er lidt ressourcer som kan hjælpe jer:
+   **Her er lidt ressourcer som kan hjælpe jer:**
       1. https://developer.mozilla.org/en-US/docs/Web/API/DOMParser
       2. https://dev.to/niinpatel/converting-xml-to-json-using-recursion-2k4j
       
@@ -56,7 +57,7 @@ Se XD fil i mappen projekt-UI.
 
    En nyhedskategori kan være "åben", så de relaterede artikler fremgår af en liste herunder. En nyhedskategori kan også være    "lukket", sådan at det kun er nyhedskategorien som fremgår af listen men ikke de relaterede artiker. Det er din opgave at      animere overgangen mellem "åben" / "lukket" tilstand på en lækker måde.
  
-   I settingspanelt kan man "tænde og slukke" for nyhedskategorier. Det er din opgave at animere kontakternes overgang fra        "tænt" til "slukket".
+   I settingspanelt kan man "tænde og slukke" for nyhedskategorier. Det er din opgave at animere "kontakternes/switches"          overgang fra "tænt" til "slukket".
  
 4. **UI komponenter**
 
@@ -72,12 +73,12 @@ Se XD fil i mappen projekt-UI.
 
 
 ## Nice to have opgaver
-Husk at 'nice-to-have' opgaverne ikke er valgfrie opgaver! Jeg forventer at du begynder at udvikle nedenstående fetures, når du er færdig med de oblikatoriske opgaver. Husk også at jo flere features du har med i projektet, jo federe er det at vise frem i sit portfolio.
+Husk at 'nice-to-have' opgaverne **ikke** er valgfrie opgaver! Jeg forventer at du begynder at udvikle nedenstående fetures, når du er færdig med de oblikatoriske opgaver. Husk også at jo flere features du har med i projektet, jo federe er det at vise frem i sit portfolio.
 
 1. Tilføj Swipe-down to refresh på nyhedsliste:
     [se illustraion](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/pull-to-refresh-823x1024.png "swipe-down")
-2. Feature tutorial første gang appen bruges: [se illustration](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/tutorial.png "tutorial")
-3. Gør det muligt at redigere rækkefølgen på kategorier i settings.
+2. Feature tutorial første gang webapplikationen bruges: [se illustration](https://github.com/rts-cmk-opgaver/praktik-projekt-newsbox/blob/master/assets/tutorial.png "tutorial")
+3. Gør det muligt at redigere rækkefølgen på kategorier i settings. Rækkefølgen skal have indflydelse på den rækkefølge kategorierne listes i nyhedslisten.
 
 ## Aflevering og evaluering
 Opgaven skal være færdig senest fredag d. 17/4 kl. 13:40. Dvs. at det sidste push inden sluttidspunktet udgør din aflevering. Dit projekt vil blive testet på en telefon(iPhone 11), så det er vigtigt at du også tester på din telefon, og ikke udelukkende tester i browserens emulator.
@@ -99,3 +100,6 @@ https://teams.microsoft.com/l/channel/19%3a1b3dcaedd4b44f3b9a84e6b19377f71e%40th
 
 **Live share:**<br>
 Denne VSCode extensions giver jer ligeledes mulighed for at dele udviklingsmiljø med hinanden.
+
+Rigtig god arbejdslyst
+Troels
