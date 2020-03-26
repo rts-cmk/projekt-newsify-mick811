@@ -43,7 +43,9 @@ Se XD fil i mappen projekt-UI.
    
 2. **Datakonvertering**
  
-   The New York Times nyheder er tilgængelige i RSS-feeds.
+   The New York Times nyheder er tilgængelige i RSS-feed
+   https://archive.nytimes.com/www.nytimes.com/services/xml/rss/index.html
+   
    Et RSS-feed er en [XML](https://developer.mozilla.org/en-US/docs/Glossary/XML)-fil der distribueres af TNYT's webserver.      Nyhedsdata leveres altså ikke i JSON format og det er derfor nødvendigt at få konvateret data fra XML- til JSON format for    at I kan arbejde med data-præsentation som i plejer.
 
    **Her er lidt ressourcer som kan hjælpe jer:**
