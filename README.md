@@ -22,11 +22,12 @@ Du finder listen  i slutningen af denne readme.
 ## Applikations tech stack
 
 HTML(structure)<br>
-Tailwind CSS(UI components)<br>
+~~Tailwind CSS(UI components)~~<br>
 JavaScript(logic / data collection)<br>
-Anime.js(Animations)<br>
-Animate.css(Animations)<br>
-Ejs(view engine)<br>
+~~Anime.js(Animations)~~<br>
+~~Animate.css(Animations)~~<br>
+~~Ejs(view engine)~~<br>
+Sass(css preprocessor)
 Netlify(host)<br>
 Gulp(build system)<br>
 
@@ -95,7 +96,7 @@ Her skal du angive din webapplikations URL(Netlify)
 På 'cmk-stacken' har I mulighed for at hjælpe eller få hjælpe fra hinanden og skolens undervisere.
 https://stackoverflow.com/c/rts-cmk/questions
 
-Det er et **krav** at i bruger *"Hvordan stiller jeg et godt spørgsmål?"* som guide for udformning af jeres spørgsmål.
+Det er et **krav** at I bruger *"Hvordan stiller jeg et godt spørgsmål?"* som guide for udformning af jeres spørgsmål.
 https://stackoverflow.com/help/how-to-ask
 
 **Microsoft Teams:**<br>
@@ -106,4 +107,3 @@ https://teams.microsoft.com/l/channel/19%3a1b3dcaedd4b44f3b9a84e6b19377f71e%40th
 Denne VSCode extensions giver jer ligeledes mulighed for at dele udviklingsmiljø med hinanden.
 
 Rigtig god arbejdslyst
-Troels
