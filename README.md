@@ -50,7 +50,7 @@ Se XD fil (og billeder) i mappen projekt-UI.
 
 
 3. **Automatisering**<br>
-    Din udviklingsproces skal automatiseres med gulp. Du skal opsætte tasks til at flytte og behandle de filer du udvikler til en "dist"-mapppe i din udviklingsproces og en "build"-mappe når dit projekt deployes til Netlify. Der skal være processer som:
+    Din udviklingsproces skal automatiseres med gulp. Du skal opsætte tasks til at flytte og behandle de filer du udvikler til en "dist"-mappe i din udviklingsproces og en "build"-mappe når dit projekt deployes til Netlify. Der skal være processer som:
     * flytter html filer.
     * behandler og sammenskriver sass-filer til en samlet css fil.
     * behandler javascript filer med Babel, og sammenskriver dem til én fil.
