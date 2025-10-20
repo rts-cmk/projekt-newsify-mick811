@@ -5,7 +5,7 @@ import { env } from "@/env";
 
 import * as schema from "./schema";
 
-const driver = postgres(env.DATABASE_URL);
+const driver = postgres(env.server.DATABASE_URL);
 
 const getDatabase = createServerOnlyFn(() =>
 	drizzle({ client: driver, schema, casing: "snake_case" }),
