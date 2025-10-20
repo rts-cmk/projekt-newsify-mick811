@@ -1,12 +1,25 @@
+import type { QueryClient } from "@tanstack/react-query";
 import {
-	createRootRoute,
+	createRootRouteWithContext,
 	HeadContent,
 	Outlet,
 	Scripts,
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{
+	queryClient: QueryClient;
+}>()({
+	beforeLoad: async ({ context }) => {
+		// we're using react-query for client-side caching to reduce client-to-server calls, see /src/router.tsx
+		// better-auth's cookieCache is also enabled server-side to reduce server-to-db calls, see /src/lib/auth.ts
+		// TODO: Implement prefetching for auth queries
+		context.queryClient.prefetchQuery(authQueryOptions());
+
+		// typically we don't need the user immediately in landing pages,
+		// so we're only prefetching here and not awaiting.
+		// for protected routes with loader data, see /(authenticated)/route.tsx
+	},
 	head: () => ({
 		meta: [
 			{

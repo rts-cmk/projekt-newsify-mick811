@@ -18,6 +18,7 @@
 		"typescript": "^5.9.3"
 	},
 	"dependencies": {
+		"@tanstack/react-query": "^5.90.5",
 		"@tanstack/react-router": "^1.133.15",
 		"@tanstack/react-start": "^1.133.15",
 		"@vitejs/plugin-react": "^5.0.4",
