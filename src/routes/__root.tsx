@@ -1,58 +1,56 @@
-import type { ReactNode } from 'react'
+import type { QueryClient } from "@tanstack/react-query";
 import {
-  Outlet,
-  HeadContent,
-  Scripts,
-  createRootRouteWithContext,
-} from '@tanstack/react-router'
-import { QueryClient } from '@tanstack/react-query'
-import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
+	createRootRouteWithContext,
+	HeadContent,
+	Outlet,
+	Scripts,
+} from "@tanstack/react-router";
+import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
+import type { ReactNode } from "react";
 
 export const Route = createRootRouteWithContext<{
-  queryClient: QueryClient;
+	queryClient: QueryClient;
 }>()({
-  head: () => ({
-    meta: [
-      {
-        charSet: 'utf-8',
-      },
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
-      },
-      {
-        title: 'Newsify',
-      },
-    ],
-  }),
-  component: RootComponent,
-})
+	head: () => ({
+		meta: [
+			{
+				charSet: "utf-8",
+			},
+			{
+				name: "viewport",
+				content: "width=device-width, initial-scale=1",
+			},
+			{
+				title: "Newsify",
+			},
+		],
+	}),
+	component: RootComponent,
+});
 
 function RootComponent() {
-  return (
-    <RootDocument>
-      <Outlet />
-    </RootDocument>
-  )
+	return (
+		<RootDocument>
+			<Outlet />
+		</RootDocument>
+	);
 }
 
 function RootDocument({
-    children
+	children,
 }: Readonly<{
-    children: ReactNode
+	children: ReactNode;
 }>) {
-  return (
-    <html>
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <TanStackRouterDevtools
-          position='bottom-right'
-        />
-        <Scripts />
-      </body>
-    </html>
-  )
+	return (
+		<html lang="da">
+			<head>
+				<HeadContent />
+			</head>
+			<body>
+				{children}
+				<TanStackRouterDevtools position="bottom-right" />
+				<Scripts />
+			</body>
+		</html>
+	);
 }

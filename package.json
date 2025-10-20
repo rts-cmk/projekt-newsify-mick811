@@ -1,29 +1,30 @@
 {
-  "name": "newsbox-mick811",
-  "type": "module",
-  "private": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build"
-  },
-  "devDependencies": {
-    "@types/bun": "latest",
-    "@types/node": "^24.8.1",
-    "@types/react": "^19.2.2",
-    "@types/react-dom": "^19.2.2",
-    "vite-tsconfig-paths": "^5.1.4"
-  },
-  "peerDependencies": {
-    "typescript": "^5.9.3"
-  },
-  "dependencies": {
-    "@tanstack/react-query": "^5.90.5",
-    "@tanstack/react-router": "^1.133.15",
-    "@tanstack/react-router-devtools": "^1.133.15",
-    "@tanstack/react-start": "^1.133.15",
-    "@vitejs/plugin-react": "^5.0.4",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "vite": "^7.1.11"
-  }
+	"name": "newsbox-mick811",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.2.6",
+		"@types/bun": "latest",
+		"@types/node": "^24.8.1",
+		"@types/react": "^19.2.2",
+		"@types/react-dom": "^19.2.2",
+		"vite-tsconfig-paths": "^5.1.4"
+	},
+	"peerDependencies": {
+		"typescript": "^5.9.3"
+	},
+	"dependencies": {
+		"@tanstack/react-query": "^5.90.5",
+		"@tanstack/react-router": "^1.133.15",
+		"@tanstack/react-router-devtools": "^1.133.15",
+		"@tanstack/react-start": "^1.133.15",
+		"@vitejs/plugin-react": "^5.0.4",
+		"react": "^19.2.0",
+		"react-dom": "^19.2.0",
+		"vite": "^7.1.11"
+	}
 }
