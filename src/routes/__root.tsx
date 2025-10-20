@@ -8,6 +8,7 @@ import {
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import type { ReactNode } from "react";
 import { authQueryOptions } from "@/lib/queries";
+import styles from "@/styles/base.scss?url";
 
 export const Route = createRootRouteWithContext<{
 	queryClient: QueryClient;
@@ -34,6 +35,7 @@ export const Route = createRootRouteWithContext<{
 				title: "Newsify",
 			},
 		],
+		links: [{ rel: "stylesheet", href: styles }],
 	}),
 	component: RootComponent,
 });

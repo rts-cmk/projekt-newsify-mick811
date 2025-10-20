@@ -16,6 +16,7 @@
 		"@types/react": "^19.2.2",
 		"@types/react-dom": "^19.2.2",
 		"drizzle-kit": "^0.31.5",
+		"sass-embedded": "^1.93.2",
 		"vite-tsconfig-paths": "^5.1.4"
 	},
 	"peerDependencies": {
