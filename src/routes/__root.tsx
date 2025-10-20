@@ -1,12 +1,16 @@
 import type { ReactNode } from 'react'
 import {
   Outlet,
-  createRootRoute,
   HeadContent,
   Scripts,
+  createRootRouteWithContext,
 } from '@tanstack/react-router'
+import { QueryClient } from '@tanstack/react-query'
+import { TanStackRouterDevtools } from '@tanstack/react-router-devtools'
 
-export const Route = createRootRoute({
+export const Route = createRootRouteWithContext<{
+  queryClient: QueryClient;
+}>()({
   head: () => ({
     meta: [
       {
@@ -44,6 +48,9 @@ function RootDocument({
       </head>
       <body>
         {children}
+        <TanStackRouterDevtools
+          position='bottom-right'
+        />
         <Scripts />
       </body>
     </html>
