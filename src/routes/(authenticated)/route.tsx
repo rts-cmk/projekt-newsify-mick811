@@ -9,7 +9,7 @@ export const Route = createFileRoute("/(authenticated)")({
 			revalidateIfStale: true,
 		});
 		if (!user) {
-			throw redirect({ to: "/" });
+			throw redirect({ to: "/login" });
 		}
 
 		// re-return to update type as non-null for child routes
