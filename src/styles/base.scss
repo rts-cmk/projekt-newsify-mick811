@@ -1,0 +1,78 @@
+@use "components.scss" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+$vars: (
+    foreground-primary,
+    foreground-secondary,
+    border
+);
+
+$fonts: (
+  regular: (weight: 400, family: 'Open Sans, sans-serif'),
+  semibold: (weight: 500, family: 'Open Sans, sans-serif'),
+  bold: (weight: 600, family: 'Playfair Display, sans-serif'),
+  black: (weight: 800, family: 'Playfair Display, sans-serif'),
+);
+
+@each $name, $settings in $fonts {
+  .#{$name} {
+    font-family: map-get($settings, family);
+    font-weight: map-get($settings, weight);
+  }
+}
+
+:root {
+    color-scheme: light dark;
+
+    // Font sizes
+    --text-largest: 3rem;
+    --text-large: 2rem;
+    --text-medium: 1.25rem;
+    --text-base: 1.125rem;
+    --text-small: 1rem;
+    --text-xsmall: 0.875rem;
+
+    --font-weight-regular: 400;
+    --font-weight-semibold: 500;
+    --font-weight-bold: 600;
+    --font-weight-black: 800;
+
+    --color-primary-rgb: 77, 134, 31;
+    --color-primary: rgb(var(--color-primary-rgb));
+    --color-destructive: #FF5D5D;
+    
+    --color-background: light-dark(#FFFFFF, #222222);
+    --color-foreground-primary: light-dark(#404040, #D9D9D9);
+    --color-foreground-secondary: light-dark(#222222, #D9D9D9);
+    --color-border: #D9D9D9;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: var(--text-base);
+    color: var(--color-foreground-primary);
+    font-weight: var(--font-weight-regular);
+    background-color: var(--color-background);
+    --webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
