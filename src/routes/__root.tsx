@@ -8,7 +8,7 @@ import {
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import type { ReactNode } from "react";
 import { authQueryOptions } from "@/lib/queries";
-import styles from "@/styles/base.scss?url";
+import styles from "@/index.css?url";
 
 export const Route = createRootRouteWithContext<{
 	queryClient: QueryClient;
