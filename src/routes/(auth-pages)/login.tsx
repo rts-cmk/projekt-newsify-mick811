@@ -1,3 +1,4 @@
+import { signIn } from "@/lib/auth-client";
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/(auth-pages)/login")({
@@ -21,6 +22,9 @@ function RouteComponent() {
                 <button
                     type="button"
                     className="authentication__form-button semibold"
+                    onClick={() => signIn.social({
+                        provider: "github",
+                    })}
                 >
                     <span className="authentication__form-button-text">
                         Continue with Github
@@ -29,6 +33,9 @@ function RouteComponent() {
                 <button
                     type="button"
                     className="authentication__form-button semibold"
+                    onClick={() => signIn.social({
+                        provider: "google",
+                    })}
                 >
                     <span className="authentication__form-button-text">
                         Continue with Google
