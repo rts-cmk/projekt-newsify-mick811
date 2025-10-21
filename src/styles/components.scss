@@ -258,3 +258,56 @@
         }
     }
 }
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+
+        img {
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    &__logo-text {
+        font-size: var(--text-large);
+        font-weight: var(--font-weight-very-bold);
+        color: var(--color-foreground-secondary);
+    }
+
+    &__search {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        input {
+            width: 100%;
+            padding: 0.875rem 1.25rem;
+            border-radius: 4px;
+            border: none;
+            background-color: var(--color-foreground-primary);
+            font-size: var(--text-small);
+            color: color-mix(in srgb, var(--color-background) 40%, transparent);
+            outline: none;
+            transition: all 200ms ease-in-out;
+
+            &::placeholder {
+                color: color-mix(in srgb, var(--color-background) 40%, transparent);
+            }
+        }
+    }
+}
