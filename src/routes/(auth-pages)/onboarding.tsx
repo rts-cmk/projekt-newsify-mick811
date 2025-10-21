@@ -1,6 +1,7 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { Stepper } from "@/components/ui/stepper";
+import { useColorScheme } from "@/hooks/use-color-scheme";
 
 const onboarding = [
 	{
@@ -27,6 +28,7 @@ export const Route = createFileRoute("/(auth-pages)/onboarding")({
 function RouteComponent() {
 	const [currentStep, setCurrentStep] = useState(0);
 	const navigate = useNavigate();
+	const colorScheme = useColorScheme();
 
 	const handleContinue = () => {
 		if (currentStep === onboarding.length - 1) {
@@ -39,7 +41,7 @@ function RouteComponent() {
 		<article className="onboarding">
 			<figure className="onboarding__image">
 				<img
-					src={`/onboarding/newsify_onboarding_dark_${currentStep + 1}.png`}
+					src={`/onboarding/newsify_onboarding_${colorScheme}_${currentStep + 1}.png`}
 					alt={`Onboarding step ${currentStep + 1}`}
 					width={200}
 					height={200}
