@@ -9,7 +9,7 @@ function RouteComponent() {
 	return (
 		<section className="authentication">
 			<figure className="authentication__logo">
-				<img src="/newsify_logo_1.png" alt="Newsify" />
+				<img src="/newsify_logo_1.svg" alt="Newsify" />
 				<figcaption className="authentication__logo-text bold">
 					<span className="authentication__logo-text">Newsify</span>
 					<span className="authentication__logo-text-subtext regular">
