@@ -37,6 +37,7 @@ $fonts: (
     --color-primary: rgb(var(--color-primary-rgb));
     --color-destructive: #FF5D5D;
     
+    --color-background-darker: light-dark(#FFFFFF, #1F1F1F);
     --color-background: light-dark(#FFFFFF, #222222);
     --color-foreground-primary: light-dark(#404040, #D9D9D9);
     --color-foreground-secondary: light-dark(#222222, #D9D9D9);

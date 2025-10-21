@@ -60,7 +60,7 @@ function RootDocument({
 			</head>
 			<body>
 				{children}
-				<TanStackRouterDevtools position="bottom-right" />
+				<TanStackRouterDevtools position="top-right" />
 				<Scripts />
 			</body>
 		</html>

@@ -11,6 +11,9 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as authenticatedRouteRouteImport } from './routes/(authenticated)/route'
 import { Route as authenticatedIndexRouteImport } from './routes/(authenticated)/index'
+import { Route as authenticatedSettingsRouteImport } from './routes/(authenticated)/settings'
+import { Route as authenticatedPopularRouteImport } from './routes/(authenticated)/popular'
+import { Route as authenticatedArchiveRouteImport } from './routes/(authenticated)/archive'
 import { Route as authPagesOnboardingRouteImport } from './routes/(auth-pages)/onboarding'
 import { Route as authPagesLoginRouteImport } from './routes/(auth-pages)/login'
 import { Route as ApiAuthSplatRouteImport } from './routes/api/auth/$'
@@ -22,6 +25,21 @@ const authenticatedRouteRoute = authenticatedRouteRouteImport.update({
 const authenticatedIndexRoute = authenticatedIndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => authenticatedRouteRoute,
+} as any)
+const authenticatedSettingsRoute = authenticatedSettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => authenticatedRouteRoute,
+} as any)
+const authenticatedPopularRoute = authenticatedPopularRouteImport.update({
+  id: '/popular',
+  path: '/popular',
+  getParentRoute: () => authenticatedRouteRoute,
+} as any)
+const authenticatedArchiveRoute = authenticatedArchiveRouteImport.update({
+  id: '/archive',
+  path: '/archive',
   getParentRoute: () => authenticatedRouteRoute,
 } as any)
 const authPagesOnboardingRoute = authPagesOnboardingRouteImport.update({
@@ -43,12 +61,18 @@ const ApiAuthSplatRoute = ApiAuthSplatRouteImport.update({
 export interface FileRoutesByFullPath {
   '/login': typeof authPagesLoginRoute
   '/onboarding': typeof authPagesOnboardingRoute
+  '/archive': typeof authenticatedArchiveRoute
+  '/popular': typeof authenticatedPopularRoute
+  '/settings': typeof authenticatedSettingsRoute
   '/': typeof authenticatedIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRoutesByTo {
   '/login': typeof authPagesLoginRoute
   '/onboarding': typeof authPagesOnboardingRoute
+  '/archive': typeof authenticatedArchiveRoute
+  '/popular': typeof authenticatedPopularRoute
+  '/settings': typeof authenticatedSettingsRoute
   '/': typeof authenticatedIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
@@ -57,19 +81,39 @@ export interface FileRoutesById {
   '/(authenticated)': typeof authenticatedRouteRouteWithChildren
   '/(auth-pages)/login': typeof authPagesLoginRoute
   '/(auth-pages)/onboarding': typeof authPagesOnboardingRoute
+  '/(authenticated)/archive': typeof authenticatedArchiveRoute
+  '/(authenticated)/popular': typeof authenticatedPopularRoute
+  '/(authenticated)/settings': typeof authenticatedSettingsRoute
   '/(authenticated)/': typeof authenticatedIndexRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/login' | '/onboarding' | '/' | '/api/auth/$'
+  fullPaths:
+    | '/login'
+    | '/onboarding'
+    | '/archive'
+    | '/popular'
+    | '/settings'
+    | '/'
+    | '/api/auth/$'
   fileRoutesByTo: FileRoutesByTo
-  to: '/login' | '/onboarding' | '/' | '/api/auth/$'
+  to:
+    | '/login'
+    | '/onboarding'
+    | '/archive'
+    | '/popular'
+    | '/settings'
+    | '/'
+    | '/api/auth/$'
   id:
     | '__root__'
     | '/(authenticated)'
     | '/(auth-pages)/login'
     | '/(auth-pages)/onboarding'
+    | '/(authenticated)/archive'
+    | '/(authenticated)/popular'
+    | '/(authenticated)/settings'
     | '/(authenticated)/'
     | '/api/auth/$'
   fileRoutesById: FileRoutesById
@@ -97,6 +141,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof authenticatedIndexRouteImport
       parentRoute: typeof authenticatedRouteRoute
     }
+    '/(authenticated)/settings': {
+      id: '/(authenticated)/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof authenticatedSettingsRouteImport
+      parentRoute: typeof authenticatedRouteRoute
+    }
+    '/(authenticated)/popular': {
+      id: '/(authenticated)/popular'
+      path: '/popular'
+      fullPath: '/popular'
+      preLoaderRoute: typeof authenticatedPopularRouteImport
+      parentRoute: typeof authenticatedRouteRoute
+    }
+    '/(authenticated)/archive': {
+      id: '/(authenticated)/archive'
+      path: '/archive'
+      fullPath: '/archive'
+      preLoaderRoute: typeof authenticatedArchiveRouteImport
+      parentRoute: typeof authenticatedRouteRoute
+    }
     '/(auth-pages)/onboarding': {
       id: '/(auth-pages)/onboarding'
       path: '/onboarding'
@@ -122,10 +187,16 @@ declare module '@tanstack/react-router' {
 }
 
 interface authenticatedRouteRouteChildren {
+  authenticatedArchiveRoute: typeof authenticatedArchiveRoute
+  authenticatedPopularRoute: typeof authenticatedPopularRoute
+  authenticatedSettingsRoute: typeof authenticatedSettingsRoute
   authenticatedIndexRoute: typeof authenticatedIndexRoute
 }
 
 const authenticatedRouteRouteChildren: authenticatedRouteRouteChildren = {
+  authenticatedArchiveRoute: authenticatedArchiveRoute,
+  authenticatedPopularRoute: authenticatedPopularRoute,
+  authenticatedSettingsRoute: authenticatedSettingsRoute,
   authenticatedIndexRoute: authenticatedIndexRoute,
 }
 
