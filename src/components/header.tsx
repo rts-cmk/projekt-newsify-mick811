@@ -1,8 +1,4 @@
-export const Header = ({ 
-    showSearch = false
-}: {
-    showSearch?: boolean;
-}) => {
+export const Header = ({ showSearch = false }: { showSearch?: boolean }) => {
 	return (
 		<header className="header">
 			<figure className="header__logo">
