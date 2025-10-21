@@ -7,6 +7,8 @@ import {
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
 import type { ReactNode } from "react";
+import { Splash } from "@/components/splash";
+import { SplashProvider } from "@/context/splash-context";
 import { authQueryOptions } from "@/lib/queries";
 import styles from "@/styles/base.scss?url";
 
@@ -43,7 +45,10 @@ export const Route = createRootRouteWithContext<{
 function RootComponent() {
 	return (
 		<RootDocument>
-			<Outlet />
+			<SplashProvider>
+				<Splash />
+				<Outlet />
+			</SplashProvider>
 		</RootDocument>
 	);
 }
