@@ -6,7 +6,7 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import { useEffect, type ReactNode } from "react";
+import { type ReactNode, useEffect } from "react";
 import { Splash } from "@/components/splash";
 import { SplashProvider } from "@/context/splash-context";
 import { authQueryOptions } from "@/lib/queries";
@@ -64,8 +64,12 @@ function RootDocument({
 		if (saved === "dark" || saved === "light") {
 			document.documentElement.style.colorScheme = saved;
 		} else {
-			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-			document.documentElement.style.colorScheme = prefersDark ? "dark" : "light";
+			const prefersDark = window.matchMedia(
+				"(prefers-color-scheme: dark)",
+			).matches;
+			document.documentElement.style.colorScheme = prefersDark
+				? "dark"
+				: "light";
 		}
 	}, []);
 
