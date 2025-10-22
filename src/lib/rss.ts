@@ -53,3 +53,5 @@ export const getRSSFeed = async (url: string): Promise<RSSFeed> => {
 	const doc = new DOMParser().parseFromString(xml, "application/xml");
 	return parseRSSDocument(doc);
 };
+
+export const rssQueryKey = (url: string) => ["rssFeed", url] as const;
