@@ -36,3 +36,31 @@ export const getCategories = (): Category[] => {
 
 export const getCategoryUrls = (): string[] =>
 	getCategories().map((c) => `${NYT_RSS_BASE_URL}${c}.xml`);
+
+export const saveCategories = (categories: Category[]): void => {
+	if (typeof window === "undefined") return;
+	try {
+		localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(categories));
+	} catch (error) {
+		console.error("Failed to save categories:", error);
+	}
+};
+
+export const toggleCategory = (category: Category): void => {
+	const current = getCategories();
+	const isEnabled = current.includes(category);
+
+	if (isEnabled) {
+		// Don't allow disabling all categories
+		if (current.length <= 1) return;
+		const updated = current.filter((c) => c !== category);
+		saveCategories(updated);
+	} else {
+		const updated = [...current, category];
+		saveCategories(updated);
+	}
+};
+
+export const isCategoryEnabled = (category: Category): boolean => {
+	return getCategories().includes(category);
+};
