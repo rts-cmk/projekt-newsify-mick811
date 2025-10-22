@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { useColorScheme } from "@/hooks/use-color-scheme";
 import {
 	type Category,
 	DEFAULT_CATEGORIES,
@@ -17,7 +18,7 @@ function RouteComponent() {
 	const [enabledCategories, setEnabledCategories] = useState<Set<Category>>(
 		new Set(),
 	);
-	const [colorScheme, setColorScheme] = useState<"light" | "dark">("light");
+	const { toggleColorScheme, colorScheme } = useColorScheme();
 
 	useEffect(() => {
 		// Initialize enabled categories
@@ -28,17 +29,6 @@ function RouteComponent() {
 			}
 		}
 		setEnabledCategories(enabled);
-
-		// Initialize color scheme
-		const savedScheme = localStorage.getItem("color-scheme");
-		if (savedScheme === "dark" || savedScheme === "light") {
-			setColorScheme(savedScheme);
-		} else {
-			const prefersDark = window.matchMedia(
-				"(prefers-color-scheme: dark)",
-			).matches;
-			setColorScheme(prefersDark ? "dark" : "light");
-		}
 	}, []);
 
 	const handleToggleCategory = (category: Category) => {
@@ -52,13 +42,6 @@ function RouteComponent() {
 			}
 			return updated;
 		});
-	};
-
-	const handleToggleDarkMode = () => {
-		const newScheme = colorScheme === "light" ? "dark" : "light";
-		setColorScheme(newScheme);
-		localStorage.setItem("color-scheme", newScheme);
-		document.documentElement.setAttribute("data-color-scheme", newScheme);
 	};
 
 	return (
@@ -104,10 +87,10 @@ function RouteComponent() {
 
 					<button
 						type="button"
-						onClick={handleToggleDarkMode}
+						onClick={toggleColorScheme}
 						className="settings__dark-mode-button"
 					>
-						Toggle dark mode
+						Toggle {colorScheme === "light" ? "dark mode" : "light mode"}
 					</button>
 
 					<p className="settings__version">Version 4.8.15.16.23.42</p>

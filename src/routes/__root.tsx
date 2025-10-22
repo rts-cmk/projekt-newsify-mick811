@@ -6,7 +6,7 @@ import {
 	Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtools } from "@tanstack/react-router-devtools";
-import type { ReactNode } from "react";
+import { useEffect, type ReactNode } from "react";
 import { Splash } from "@/components/splash";
 import { SplashProvider } from "@/context/splash-context";
 import { authQueryOptions } from "@/lib/queries";
@@ -58,6 +58,17 @@ function RootDocument({
 }: Readonly<{
 	children: ReactNode;
 }>) {
+	useEffect(() => {
+		// Initialize color scheme on mount
+		const saved = localStorage.getItem("color-scheme");
+		if (saved === "dark" || saved === "light") {
+			document.documentElement.style.colorScheme = saved;
+		} else {
+			const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+			document.documentElement.style.colorScheme = prefersDark ? "dark" : "light";
+		}
+	}, []);
+
 	return (
 		<html lang="da">
 			<head>
