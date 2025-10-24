@@ -1,7 +1,7 @@
 export const NYT_RSS_BASE_URL = "https://rss.nytimes.com/services/xml/rss/nyt/";
 
 export const DEFAULT_CATEGORIES = [
-	"europe",
+	"world",
 	"health",
 	"sports",
 	"business",
