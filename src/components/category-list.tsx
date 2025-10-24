@@ -104,29 +104,25 @@ const ArticleCard = ({
 	};
 
 	return (
-		<article className="p-4 border rounded-lg hover:shadow-md transition-shadow">
-			<a
-				href={article.url}
-				target="_blank"
-				rel="noopener noreferrer"
-				className="block"
-				onClick={handleClick}
-			>
-				<h3 className="text-lg font-semibold mb-2 hover:text-blue-600 transition-colors">
-					{article.title}
-				</h3>
-				{article.abstract && (
-					<p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-						{article.abstract}
-					</p>
-				)}
-				{article.byline && (
-					<p className="text-xs text-gray-500 dark:text-gray-500">
-						{article.byline}
-					</p>
-				)}
-			</a>
-		</article>
+		<li className="category-list__item">
+			<article className="article-card">
+				<a
+					href={article.url}
+					target="_blank"
+					rel="noopener noreferrer"
+					className="article-card__link"
+					onClick={handleClick}
+				>
+					<h3 className="article-card__title">{article.title}</h3>
+					{article.abstract && (
+						<p className="article-card__abstract">{article.abstract}</p>
+					)}
+					{article.byline && (
+						<p className="article-card__byline">{article.byline}</p>
+					)}
+				</a>
+			</article>
+		</li>
 	);
 };
 
@@ -142,7 +138,7 @@ export function CategoryList<T extends ArticleType>({
 	if (!data || data.length === 0) return null;
 
 	return (
-		<div className="space-y-4">
+		<ul className="category-list">
 			{data.map((article) => {
 				const adapter = createArticleAdapter(article);
 				return (
@@ -153,6 +149,6 @@ export function CategoryList<T extends ArticleType>({
 					/>
 				);
 			})}
-		</div>
+		</ul>
 	);
 }
