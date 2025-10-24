@@ -1,9 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
+import { type ArchivedArticle, getArchivedArticles } from "@/lib/archive";
 import {
-	fetchArchive,
 	fetchMostPopular,
 	fetchTopStories,
-	type NYTimesArchiveArticle,
 	type NYTimesArticle,
 	type NYTimesPopularArticle,
 	nytimesQueryKeys,
@@ -27,12 +26,11 @@ export const useMostPopular = (category?: string) => {
 	});
 };
 
-export const useArchive = (year: number, month: number) => {
-	return useQuery<NYTimesArchiveArticle[]>({
-		queryKey: nytimesQueryKeys.archive(year, month),
-		queryFn: () => fetchArchive(year, month),
-		staleTime: 1000 * 60 * 60 * 24,
-		gcTime: 1000 * 60 * 60 * 24 * 7,
-		enabled: year > 0 && month > 0 && month <= 12,
+export const useArchive = () => {
+	return useQuery<ArchivedArticle[]>({
+		queryKey: ["archive"],
+		queryFn: () => getArchivedArticles(),
+		staleTime: 1000 * 60 * 5,
+		gcTime: 1000 * 60 * 10,
 	});
 };

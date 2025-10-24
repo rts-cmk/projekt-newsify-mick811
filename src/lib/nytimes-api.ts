@@ -72,64 +72,6 @@ export type NYTimesPopularArticle = {
 	eta_id: number;
 };
 
-export type NYTimesArchiveArticle = {
-	abstract: string;
-	web_url: string;
-	snippet: string;
-	lead_paragraph: string;
-	source: string;
-	multimedia: {
-		rank: number;
-		subtype: string;
-		caption: string | null;
-		credit: string | null;
-		type: string;
-		url: string;
-		height: number;
-		width: number;
-		legacy: Record<string, unknown>;
-		subType: string;
-		crop_name: string;
-	}[];
-	headline: {
-		main: string;
-		kicker: string | null;
-		content_kicker: string | null;
-		print_headline: string | null;
-		name: string | null;
-		seo: string | null;
-		sub: string | null;
-	};
-	keywords: {
-		name: string;
-		value: string;
-		rank: number;
-		major: string;
-	}[];
-	pub_date: string;
-	document_type: string;
-	news_desk: string;
-	section_name: string;
-	byline: {
-		original: string | null;
-		person: {
-			firstname: string;
-			middlename: string | null;
-			lastname: string;
-			qualifier: string | null;
-			title: string | null;
-			role: string;
-			organization: string;
-			rank: number;
-		}[];
-		organization: string | null;
-	};
-	type_of_material: string;
-	_id: string;
-	word_count: number;
-	uri: string;
-};
-
 /**
  * Fetch top stories by category from NYTimes API
  * https://developer.nytimes.com/docs/top-stories-product/1/overview
@@ -185,34 +127,8 @@ export const fetchMostPopular = async (
 	return results;
 };
 
-/**
- * Fetch archive articles by year and month from NYTimes API
- * https://developer.nytimes.com/docs/archive-product/1/overview
- */
-export const fetchArchive = async (
-	year: number,
-	month: number,
-): Promise<NYTimesArchiveArticle[]> => {
-	const url = new URL(
-		`https://api.nytimes.com/svc/archive/v1/${year}/${month}.json`,
-	);
-	url.searchParams.set("api-key", API_KEY);
-
-	const response = await fetch(url);
-	if (!response.ok) {
-		throw new Error(
-			`Failed to fetch archive: ${response.status} ${response.statusText}`,
-		);
-	}
-
-	const data = await response.json();
-	return data.response.docs;
-};
-
 export const nytimesQueryKeys = {
 	topStories: (category: string) =>
 		["nytimes", "topStories", category] as const,
 	popular: (category?: string) => ["nytimes", "popular", category] as const,
-	archive: (year: number, month: number) =>
-		["nytimes", "archive", year, month] as const,
 };
