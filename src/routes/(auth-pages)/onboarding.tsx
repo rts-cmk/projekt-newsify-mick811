@@ -1,4 +1,9 @@
-import { createFileRoute, Link, redirect, useNavigate } from "@tanstack/react-router";
+import {
+	createFileRoute,
+	Link,
+	redirect,
+	useNavigate,
+} from "@tanstack/react-router";
 import { useState } from "react";
 import { Stepper } from "@/components/ui/stepper";
 import { useColorScheme } from "@/hooks/use-color-scheme";
@@ -85,10 +90,7 @@ function RouteComponent() {
 						className="onboarding__footer-button-skip semibold"
 						onClick={handleSkip}
 					>
-						<Link
-							to="/login"
-							className="onboarding__footer-button-skip__link"
-						>
+						<Link to="/login" className="onboarding__footer-button-skip__link">
 							Skip
 						</Link>
 					</button>

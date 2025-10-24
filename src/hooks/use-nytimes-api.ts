@@ -13,7 +13,8 @@ export const useTopStories = (category: string) => {
 	return useQuery<NYTimesArticle[]>({
 		queryKey: nytimesQueryKeys.topStories(category),
 		queryFn: () => fetchTopStories(category),
-		staleTime: 1000 * 60 * 5, // 5 minutes
+		staleTime: 1000 * 60 * 30,
+		gcTime: 1000 * 60 * 60,
 	});
 };
 
@@ -21,7 +22,8 @@ export const useMostPopular = (category?: string) => {
 	return useQuery<NYTimesPopularArticle[]>({
 		queryKey: nytimesQueryKeys.popular(category),
 		queryFn: () => fetchMostPopular(category),
-		staleTime: 1000 * 60 * 5, // 5 minutes
+		staleTime: 1000 * 60 * 30,
+		gcTime: 1000 * 60 * 60,
 	});
 };
 
@@ -29,7 +31,8 @@ export const useArchive = (year: number, month: number) => {
 	return useQuery<NYTimesArchiveArticle[]>({
 		queryKey: nytimesQueryKeys.archive(year, month),
 		queryFn: () => fetchArchive(year, month),
-		staleTime: 1000 * 60 * 10, // 10 minutes (archives don't change)
+		staleTime: 1000 * 60 * 60 * 24,
+		gcTime: 1000 * 60 * 60 * 24 * 7,
 		enabled: year > 0 && month > 0 && month <= 12,
 	});
 };

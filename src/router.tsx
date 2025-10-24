@@ -10,7 +10,9 @@ export function getRouter() {
 		defaultOptions: {
 			queries: {
 				refetchOnWindowFocus: false,
-				staleTime: 1000 * 60 * 2, // 2 minutes
+				staleTime: 1000 * 60 * 30,
+				gcTime: 1000 * 60 * 60,
+				retry: 1,
 			},
 		},
 	});
