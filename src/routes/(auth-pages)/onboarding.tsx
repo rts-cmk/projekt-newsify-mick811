@@ -1,7 +1,8 @@
-import { createFileRoute, Link, useNavigate } from "@tanstack/react-router";
+import { createFileRoute, Link, redirect, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { Stepper } from "@/components/ui/stepper";
 import { useColorScheme } from "@/hooks/use-color-scheme";
+import { authQueryOptions } from "@/lib/queries";
 
 const onboarding = [
 	{
@@ -22,19 +23,39 @@ const onboarding = [
 ];
 
 export const Route = createFileRoute("/(auth-pages)/onboarding")({
+	ssr: false,
 	component: RouteComponent,
+	beforeLoad: async ({ context }) => {
+		const user = await context.queryClient.ensureQueryData({
+			...authQueryOptions(),
+			revalidateIfStale: true,
+		});
+		if (user) {
+			throw redirect({ to: "/" });
+		}
+	},
 });
 
 function RouteComponent() {
 	const [currentStep, setCurrentStep] = useState(0);
+	const { colorScheme } = useColorScheme();
 	const navigate = useNavigate();
-	const colorScheme = useColorScheme();
+
+	const completeOnboarding = () => {
+		localStorage.setItem("onboarding_completed", "true");
+		navigate({ to: "/login" });
+	};
 
 	const handleContinue = () => {
 		if (currentStep === onboarding.length - 1) {
-			navigate({ to: "/login" });
+			completeOnboarding();
+		} else {
+			setCurrentStep(currentStep + 1);
 		}
-		setCurrentStep(currentStep + 1);
+	};
+
+	const handleSkip = () => {
+		completeOnboarding();
 	};
 
 	return (
@@ -62,8 +83,12 @@ function RouteComponent() {
 					<button
 						type="button"
 						className="onboarding__footer-button-skip semibold"
+						onClick={handleSkip}
 					>
-						<Link to="/login" className="onboarding__footer-button-skip__link">
+						<Link
+							to="/login"
+							className="onboarding__footer-button-skip__link"
+						>
 							Skip
 						</Link>
 					</button>

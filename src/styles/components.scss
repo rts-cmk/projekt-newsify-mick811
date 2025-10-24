@@ -227,10 +227,19 @@
         background-color: transparent;
         color: var(--color-primary);
 
+        &:hover {
+            background-color: rgba(var(--color-primary-rgb), 0.05);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+
         &:active {
             transform: scale(0.98);
         }
-        
+
         &__link {
             color: var(--color-primary);
             text-decoration: none;
