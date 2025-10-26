@@ -1,8 +1,10 @@
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
-import App from "./App";
+import { SettingsProvider } from "./context/settingsContext";
 import { Spinner } from "./components/spinner";
+import App from "./App";
+import Settings from "./routes/Settings";
 
 const router = createBrowserRouter([
     {
@@ -20,6 +22,10 @@ const router = createBrowserRouter([
                     new Promise((resolve) => { setTimeout(() => {
                         resolve(null)
                     }, 1000) }),
+            },
+            {
+                path: "/settings",
+                element: <Settings />,
             }
         ]
     },
@@ -28,5 +34,7 @@ const router = createBrowserRouter([
 const root = document.getElementById("root") as HTMLElement;
 
 ReactDOM.createRoot(root).render(
-    <RouterProvider router={router} />
+    <SettingsProvider>
+        <RouterProvider router={router} />
+    </SettingsProvider>
 );
