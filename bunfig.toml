@@ -1,0 +1,6 @@
+[serve.static]
+plugins = ["bun-plugin-tailwind"]
+
+[install]
+auto = "fallbackw"
+saveTextLockfile = false
