@@ -13,7 +13,7 @@ export default function Onboarding() {
 	};
 
 	const continueOnboarding = (idx: number) => {
-		if(idx === onboarding.length - 1) {
+		if (idx === onboarding.length - 1) {
 			handleCompleteOnboarding();
 			return;
 		}
@@ -42,10 +42,7 @@ export default function Onboarding() {
 
 				{/* stepper component for showing the current step */}
 				<div className="button-group">
-					<button
-						type="button"
-						onClick={handleCompleteOnboarding}
-					>
+					<button type="button" onClick={handleCompleteOnboarding}>
 						Skip
 					</button>
 					<button
