@@ -1,10 +1,11 @@
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, redirect } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import App from "./App";
 import { Spinner } from "./components/spinner";
 import { SettingsProvider } from "./context/settingsContext";
 import Settings from "./routes/Settings";
+import Onboarding from "./routes/Onboarding";
 
 const router = createBrowserRouter([
 	{
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
 				path: "/settings",
 				element: <Settings />,
 			},
+            {
+                path: "/onboarding/:id",
+                element: <Onboarding />,
+            }
 		],
 	},
 ]);
