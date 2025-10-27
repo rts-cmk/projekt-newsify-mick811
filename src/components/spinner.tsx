@@ -31,7 +31,7 @@ export const Spinner = () => {
 				viewBox="0 0 78 113"
 				fill="none"
 				xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
+				aria-hidden="true"
 			>
 				<g clipPath="url(#clip0_2022_7)">
 					<path

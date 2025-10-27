@@ -20,18 +20,22 @@ export default function Settings() {
 			</header>
 
 			<ul>
-				{Object.entries(settings.categories).map(([category, state]) => {
-					return (
-						<li key={category}>
-							<input
-								type="checkbox"
-								checked={state}
-								onChange={() => handleCategoryChange(category)}
-							/>
-							{category}
-						</li>
-					);
-				})}
+				{Object.entries(settings.categories).map(
+					([category, state]) => {
+						return (
+							<li key={category}>
+								<input
+									type="checkbox"
+									checked={state}
+									onChange={() =>
+										handleCategoryChange(category)
+									}
+								/>
+								{category}
+							</li>
+						);
+					},
+				)}
 			</ul>
 
 			<button
