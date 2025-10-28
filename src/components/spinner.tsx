@@ -14,9 +14,9 @@ export const Spinner = () => {
 				},
 			});
 
-            // need to work on this
+			// need to work on this
 			tl.to("svg", { scale: 3, duration: 2 });
-			tl.to("svg", { scale: 1, duration: 2 }); 
+			tl.to("svg", { scale: 1, duration: 2 });
 		}, spinnerRef);
 
 		return () => {

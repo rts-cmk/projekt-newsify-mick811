@@ -25,19 +25,13 @@ const router = createBrowserRouter([
 			{
 				path: "/",
 				element: <App />,
-				loader: async () =>
-					new Promise((resolve) => {
-						setTimeout(() => {
-							resolve(null);
-						}, 1000);
-					}),
 			},
 			{
 				path: "/settings",
 				element: <Settings />,
 			},
 			{
-				path: "/onboarding/:id",
+				path: "/onboarding",
 				element: <Onboarding />,
 			},
 		],
