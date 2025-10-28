@@ -1,3 +1,7 @@
+import { createAsyncStoragePersister } from "@tanstack/query-async-storage-persister";
+import { QueryClient } from "@tanstack/react-query";
+import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
@@ -39,9 +43,28 @@ const router = createBrowserRouter([
 ]);
 
 const root = document.getElementById("root") as HTMLElement;
+const queryClient = new QueryClient({
+	defaultOptions: {
+		queries: {
+			refetchOnWindowFocus: false,
+			gcTime: 1000 * 60 * 60 * 24, // 24 hours
+		},
+	},
+});
+
+const persister = createAsyncStoragePersister({
+	storage: window.localStorage,
+});
 
 ReactDOM.createRoot(root).render(
-	<SettingsProvider>
-		<RouterProvider router={router} />
-	</SettingsProvider>,
+	<React.StrictMode>
+		<PersistQueryClientProvider
+			client={queryClient}
+			persistOptions={{ persister }}
+		>
+			<SettingsProvider>
+				<RouterProvider router={router} />
+			</SettingsProvider>
+		</PersistQueryClientProvider>
+	</React.StrictMode>,
 );
