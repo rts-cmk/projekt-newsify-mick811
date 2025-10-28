@@ -1,0 +1,48 @@
+@use "sass:map";
+
+$theme-colors-light: (
+    "primary": #4D861F,
+    "destructive": #FF5D5D,
+    "text-foreground-primary": #404040,
+    "text-foreground-secondary": #222222,
+    "text-accent": #D9D9D9,
+    "border": #C5C5C5,
+    "background": #FFFFFF,
+);
+
+$theme-colors-dark: (
+    "primary": #46781B,
+    "destructive": #FF5D5D,
+    "text-foreground-primary": #D9D9D9,
+    "text-foreground-secondary": #D9D9D9,
+    "text-accent": #A5A5A5,
+    "border": #C5C5C5,
+    "background": #222222,
+);
+
+@function color($name) {
+    $light: map.get($theme-colors-light, $name);
+    $dark: map.get($theme-colors-dark, $name);
+    @return light-dark($light, $dark);
+}
+
+:root {
+    color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+
+html.dark,
+body.dark {
+    color-scheme: dark;
+}
+
+body {
+    background: color("background");
+    color: color("text-foreground-primary");
+    border-color: color("border");
+}

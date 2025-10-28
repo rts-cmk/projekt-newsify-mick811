@@ -11,6 +11,7 @@ import { Spinner } from "./components/spinner";
 import { SettingsProvider } from "./context/settingsContext";
 import Onboarding from "./routes/Onboarding";
 import Settings from "./routes/Settings";
+import "./styles/main.scss";
 
 const router = createBrowserRouter([
 	{
