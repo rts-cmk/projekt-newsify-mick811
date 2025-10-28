@@ -14,8 +14,9 @@ export const Spinner = () => {
 				},
 			});
 
-			tl.to("svg", { scale: 1.2, duration: 2 });
-			tl.to("svg", { scale: 1, duration: 2 });
+            // need to work on this
+			tl.to("svg", { scale: 3, duration: 2 });
+			tl.to("svg", { scale: 1, duration: 2 }); 
 		}, spinnerRef);
 
 		return () => {
@@ -24,7 +25,7 @@ export const Spinner = () => {
 	}, []);
 
 	return (
-		<div className="" ref={spinnerRef}>
+		<div className="spinner" ref={spinnerRef}>
 			<svg
 				width="78"
 				height="113"
