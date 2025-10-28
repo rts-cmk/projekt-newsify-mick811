@@ -1,0 +1,39 @@
+@use "theme" as theme;
+
+%button-base {
+    width: 166px;
+    height: 62px;
+	background: theme.color("primary");
+	color: #fff;
+	border: 1px solid theme.color("primary");
+	border-radius: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+
+	&:hover {
+		background: color-mix(in srgb, theme.color("primary"), transparent 20%);
+	}
+}
+
+[data-default] {
+	@extend %button-base;
+}
+
+[data-outline] {
+    @extend %button-base;
+    background: transparent;
+    color: theme.color("primary");
+
+    &:hover {
+        background: none;
+        border-color: color-mix(in srgb,  theme.color("primary"), transparent 20%);
+    }
+}
+
+[data-shadow] {
+	@extend %button-base;
+    width: 345px;
+	box-shadow: 0 2px 8px color-mix(in srgb, theme.color("primary"), transparent 70%);
+    font-size: 16px;
+}

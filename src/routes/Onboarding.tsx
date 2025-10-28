@@ -59,11 +59,16 @@ export default function Onboarding() {
 
 				{/* stepper component for showing the current step */}
 				<div className="button-group">
-					<button type="button" onClick={handleCompleteOnboarding}>
+					<button
+                        type="button"
+                        data-outline="true"
+                        onClick={handleCompleteOnboarding}
+                    >
 						Skip
 					</button>
 					<button
 						type="button"
+                        data-default="true"
 						onClick={() => continueOnboarding(idx)}
 					>
 						Continue
