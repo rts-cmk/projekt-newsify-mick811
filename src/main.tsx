@@ -1,5 +1,6 @@
 import { createAsyncStoragePersister } from "@tanstack/query-async-storage-persister";
 import { QueryClient } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import React from "react";
 import ReactDOM from "react-dom/client";
@@ -65,6 +66,7 @@ ReactDOM.createRoot(root).render(
 			<SettingsProvider>
 				<RouterProvider router={router} />
 			</SettingsProvider>
+			<ReactQueryDevtools />
 		</PersistQueryClientProvider>
 	</React.StrictMode>,
 );
