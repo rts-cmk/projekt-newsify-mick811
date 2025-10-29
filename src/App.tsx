@@ -1,3 +1,10 @@
+import { Footer, Header } from "./components/layout";
+
 export default function App() {
-	return <div>Hello, World!</div>;
+	return (
+		<>
+			<Header search={true} />
+			<Footer />
+		</>
+	);
 }

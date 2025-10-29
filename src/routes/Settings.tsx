@@ -1,3 +1,4 @@
+import { Footer, Header } from "../components/layout";
 import { useSettings } from "../context/settingsContext";
 
 export default function Settings() {
@@ -14,6 +15,7 @@ export default function Settings() {
 
 	return (
 		<div>
+            <Header search={false} />
 			<header>
 				<h2>Settings</h2>
 				<span>Categories</span>
@@ -51,6 +53,7 @@ export default function Settings() {
 			</button>
 
 			<p>Version 4.8.15.16.23.42</p>
+            <Footer />
 		</div>
 	);
 }
