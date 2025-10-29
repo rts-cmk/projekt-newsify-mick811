@@ -1,4 +1,8 @@
+import { Link, useNavigate } from "react-router";
+
 export default function Login() {
+    const navigate = useNavigate();
+
 	return (
 		<div className="auth-container">
 			<span className="logo" role="img" aria-label="Newsify Logo">
@@ -71,12 +75,18 @@ export default function Login() {
                 <button
                     type="button"
                     data-outline-secondary="true"
+                    onClick={() => {
+                        navigate("/")
+                    }}
                 >
                     Sign in with Facebook
                 </button>
                 <button
                     type="button"
                     data-outline-secondary="true"
+                    onClick={() => {
+                        navigate("/")
+                    }}
                 >
                     Sign in with Google
                 </button>
@@ -88,11 +98,16 @@ export default function Login() {
                 <button
                     type="button"
                     data-shadow="true"
+                    onClick={() => {
+                        navigate("/")
+                    }}
                 >
                     Sign in with password
                 </button>
                 <p>Don't have an account?{" "}
-                    <span>Sign Up</span>
+                    <Link to={"/"}>
+                        Sign up
+                    </Link>
                 </p>
             </div>
         </div>
