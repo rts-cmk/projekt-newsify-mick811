@@ -31,6 +31,19 @@
     }
 }
 
+[data-outline-secondary] {
+    @extend %button-base;
+    background: transparent;
+    color: theme.color("text-foreground-primary");
+    border-color: theme.color("border");
+    width: 345px;
+
+    &:hover {
+        background: none;
+        border-color: color-mix(in srgb,  theme.color("border"), transparent 20%);
+    }
+}
+
 [data-shadow] {
 	@extend %button-base;
     width: 345px;

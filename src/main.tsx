@@ -12,6 +12,7 @@ import { SettingsProvider } from "./context/settingsContext";
 import Onboarding from "./routes/Onboarding";
 import Settings from "./routes/Settings";
 import "./styles/main.scss";
+import Login from "./routes/Login";
 
 const router = createBrowserRouter([
 	{
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
 				path: "/onboarding",
 				element: <Onboarding />,
 			},
+            {
+                path: "/login",
+                element: <Login />,
+            }
 		],
 	},
 ]);
