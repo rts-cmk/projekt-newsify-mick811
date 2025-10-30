@@ -37,11 +37,14 @@ export function Accordion({ title, children }: AccordionProps) {
 }
 
 interface AccordionItemProps {
-	children: React.ReactNode;
+	children?: React.ReactNode;
 	className?: string;
 	swipe?: boolean;
 	type?: "delete" | "bookmark";
 	onAction?: () => void;
+	title?: string;
+	abstract?: string;
+	imageUrl?: string;
 }
 
 export function AccordionItem({
@@ -50,11 +53,40 @@ export function AccordionItem({
 	swipe = true,
 	type = "delete",
 	onAction,
+	title,
+	abstract,
+	imageUrl,
 }: AccordionItemProps) {
 	const swipeRef = useRef<SwipeToRevealHandle>(null);
 
+	const content = title || abstract ? (
+		<div className="accordion-item">
+			<div className="accordion-item-image-wrapper">
+				{imageUrl ? (
+					<img
+						src={imageUrl}
+						alt={title || ""}
+						className="accordion-item-image"
+					/>
+				) : (
+					<div className="accordion-item-image-placeholder" />
+				)}
+			</div>
+			<div className="accordion-item-content">
+				{title && <h3 className="accordion-item-headline">{title}</h3>}
+				{abstract && (
+					<p className="accordion-item-paragraph truncate-multiline">
+						{abstract}
+					</p>
+				)}
+			</div>
+		</div>
+	) : (
+		<div className="accordion-item">{children}</div>
+	);
+
 	if (!swipe) {
-		return <div className={`accordion-item ${className}`}>{children}</div>;
+		return <div className={className}>{content}</div>;
 	}
 
 	return (
@@ -64,7 +96,7 @@ export function AccordionItem({
 			onAction={onAction}
 			className={className}
 		>
-			<div className="accordion-item">{children}</div>
+			{content}
 		</SwipeToReveal>
 	);
 }

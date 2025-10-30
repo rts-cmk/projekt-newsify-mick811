@@ -297,6 +297,113 @@
             font-size: 16px;
         }
     }
+
+    &-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        padding: 16px 0;
+        border-top: 1px solid theme.color("border");
+
+        &-image {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            background: color-mix(in srgb, theme.color("border"), transparent 50%);
+        }
+
+        &-image-wrapper {
+            flex-shrink: 0;
+            width: 80px;
+            height: 80px;
+        }
+
+        &-image-placeholder {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            background: color-mix(in srgb, theme.color("border"), transparent 50%);
+        }
+
+        &-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            min-width: 0;
+        }
+
+        &-headline {
+            font-weight: 700;
+            font-size: 16px;
+            color: theme.color("text-foreground-primary");
+            margin: 0;
+        }
+
+        &-paragraph {
+            font-weight: 400;
+            font-size: 14px;
+            color: theme.color("text-foreground-primary");
+            margin: 0;
+            line-height: 1.4;
+        }
+    }
+}
+
+.swipe-wrap {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.swipe-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    &-bookmark {
+        background-color: theme.color("primary");
+    }
+
+    &-delete {
+        background-color: theme.color("destructive");
+    }
+}
+
+.swipe-action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    &:focus-visible {
+        outline: 2px solid white;
+        outline-offset: 2px;
+        border-radius: 4px;
+    }
+}
+
+.swipe-content {
+    position: relative;
+    z-index: 2;
+    background: theme.color("background");
+    width: 100%;
 }
 
 .settings-container {
