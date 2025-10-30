@@ -144,13 +144,14 @@ export const SwipeToReveal = forwardRef<
 				<div
 					className={`swipe-bg swipe-bg-${type}`}
 					style={{ width: revealWidth }}
-					aria-hidden="true"
+					inert={tx >= 0 ? true : undefined}
 				>
 					<button
 						type="button"
 						className="swipe-action-btn"
 						onClick={handleAction}
-						aria-label={type}
+						aria-label={type === "delete" ? "Delete item" : "Bookmark item"}
+						tabIndex={tx < 0 ? 0 : -1}
 					>
 						{type === "delete" ? <DeleteIcon /> : <BookmarkIcon />}
 					</button>
