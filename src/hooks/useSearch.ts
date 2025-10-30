@@ -1,5 +1,5 @@
-import { useMemo } from "react";
 import Fuse from "fuse.js";
+import { useMemo } from "react";
 import type { Category } from "./useFetch";
 
 interface SearchableItem {
@@ -14,8 +14,8 @@ interface SearchableItem {
 	per_facet?: string[];
 	geo_facet?: string[];
 	category?: Category;
-	multimedia?: any[];
-	media?: any[];
+	multimedia?: TopStoriesMultimedia[];
+	media?: NYTMedia[];
 }
 
 interface SearchResult {
@@ -58,20 +58,31 @@ export const useSearch = (
 };
 
 export const useSearchByCategory = (
-	results: Array<{ category: Category; data?: { results: SearchableItem[] } }>,
+	results: Array<{
+		category: Category;
+		data?: { results: SearchableItem[] };
+	}>,
 	searchQuery: string,
 ): SearchResult[] => {
 	return useMemo(() => {
 		if (!searchQuery.trim()) {
 			return results
-				.filter((r) => r.data?.results?.length)
+				.filter(
+					(
+						r,
+					): r is {
+						category: Category;
+						data: { results: SearchableItem[] };
+					} => !!r.data?.results?.length,
+				)
 				.map((r) => ({
 					category: r.category,
-					items: r.data!.results,
+					items: r.data.results,
 				}));
 		}
 
-		const searchableItems: Array<SearchableItem & { category: Category }> = [];
+		const searchableItems: Array<SearchableItem & { category: Category }> =
+			[];
 		for (const result of results) {
 			if (result.data?.results) {
 				for (const item of result.data.results) {
@@ -86,13 +97,14 @@ export const useSearchByCategory = (
 		const fuse = new Fuse(searchableItems, fuseOptions);
 		const fuseResults = fuse.search(searchQuery);
 
-		const groupedByCategory: Record<Category, SearchableItem[]> = {} as Record<
-			Category,
-			SearchableItem[]
-		>;
+		const groupedByCategory: Record<Category, SearchableItem[]> =
+			{} as Record<Category, SearchableItem[]>;
 
 		for (const result of fuseResults) {
-			const category = result.item.category!;
+			const category = result.item.category;
+			if (!category) {
+				continue;
+			}
 			if (!groupedByCategory[category]) {
 				groupedByCategory[category] = [];
 			}

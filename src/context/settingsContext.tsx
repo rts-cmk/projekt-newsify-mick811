@@ -1,10 +1,10 @@
 import type React from "react";
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 export type UserSettings = {
 	theme: "light" | "dark";
 	showOnboarding: boolean;
-	archive: Record<string, any>;
+	archive: Record<string, TopStoriesResult | MostPopularResult>;
 	categories: Record<string, boolean>;
 };
 
@@ -38,7 +38,7 @@ export const getSettings = (): UserSettings => {
 export const SettingsContext = createContext({
 	settings: defaultSettings,
 	updateSettings: (_values: UserSettings) => {},
-	addToArchive: (_item: any) => {},
+	addToArchive: (_item: TopStoriesResult | MostPopularResult) => {},
 	removeFromArchive: (_uri: string) => {},
 });
 
@@ -83,7 +83,7 @@ export const SettingsProvider = ({
 			body.classList.remove("dark");
 			body.classList.add("light");
 		}
-	}, []);
+	}, [settings]);
 
 	const updateSettings = (values: UserSettings) => {
 		window.localStorage.setItem("user_settings", JSON.stringify(values));
@@ -103,7 +103,7 @@ export const SettingsProvider = ({
 	};
 
 	const removeFromArchive = (uri: string) => {
-		const { [uri]: removed, ...updatedArchive } = currentSettings.archive;
+		const { [uri]: _removed, ...updatedArchive } = currentSettings.archive;
 		const updatedSettings = {
 			...currentSettings,
 			archive: updatedArchive,

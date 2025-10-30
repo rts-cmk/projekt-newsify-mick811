@@ -1,8 +1,8 @@
 import { Accordion, AccordionItem } from "./components/accordion";
 import { Footer, Header } from "./components/layout";
-import { useFetchAllCategories } from "./hooks/useFetch";
-import { useSettings } from "./context/settingsContext";
 import { useSearch } from "./context/searchContext";
+import { useSettings } from "./context/settingsContext";
+import { useFetchAllCategories } from "./hooks/useFetch";
 import { useSearchByCategory } from "./hooks/useSearch";
 
 export default function App() {
@@ -19,7 +19,7 @@ export default function App() {
 				{filteredResults.map(({ category, items }) => (
 					<Accordion key={category} title={category}>
 						{items
-							.filter((item) => item.title && item.title.trim())
+							.filter((item) => item.title?.trim())
 							.map((item) => {
 								let imageUrl: string | undefined;
 								if ("multimedia" in item && item.multimedia) {
@@ -32,7 +32,9 @@ export default function App() {
 									const mediaItem = item.media.find(
 										(m: NYTMedia) => m.type === "image",
 									);
-									const metadata = mediaItem?.["media-metadata"]?.find(
+									const metadata = mediaItem?.[
+										"media-metadata"
+									]?.find(
 										(m: NYTMediaMetadata) =>
 											m.format === "mediumThreeByTwo210",
 									);

@@ -35,10 +35,10 @@ interface UseFetchProps {
 const fetchTopStories = async (category: Category, apiKey: string) => {
 	const { apiSection } = categoryConfig[category];
 	const url = `https://api.nytimes.com/svc/topstories/v2/${apiSection}.json?api-key=${apiKey}`;
-	
+
 	const response = await fetch(url);
 	if (!response.ok) throw new Error("Failed to fetch top stories");
-	
+
 	return (await response.json()) as TopStoriesResponse;
 };
 

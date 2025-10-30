@@ -90,22 +90,28 @@ export default function Settings() {
 				</header>
 
 				<div className="settings-list">
-					{Object.entries(settings.categories).map(([category, isEnabled]) => (
-						<div key={category} className="settings-item">
-							<div className="settings-item-content">
-								<CategoryIcon />
-								<span className="settings-item-label">{category}</span>
+					{Object.entries(settings.categories).map(
+						([category, isEnabled]) => (
+							<div key={category} className="settings-item">
+								<div className="settings-item-content">
+									<CategoryIcon />
+									<span className="settings-item-label">
+										{category}
+									</span>
+								</div>
+								<label className="toggle-switch">
+									<input
+										type="checkbox"
+										checked={isEnabled}
+										onChange={() =>
+											handleCategoryChange(category)
+										}
+									/>
+									<span className="toggle-slider" />
+								</label>
 							</div>
-							<label className="toggle-switch">
-								<input
-									type="checkbox"
-									checked={isEnabled}
-									onChange={() => handleCategoryChange(category)}
-								/>
-								<span className="toggle-slider" />
-							</label>
-						</div>
-					))}
+						),
+					)}
 				</div>
 
 				<button

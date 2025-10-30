@@ -59,31 +59,34 @@ export function AccordionItem({
 }: AccordionItemProps) {
 	const swipeRef = useRef<SwipeToRevealHandle>(null);
 
-	const content = title || abstract ? (
-		<div className="accordion-item">
-			<div className="accordion-item-image-wrapper">
-				{imageUrl ? (
-					<img
-						src={imageUrl}
-						alt={title || ""}
-						className="accordion-item-image"
-					/>
-				) : (
-					<div className="accordion-item-image-placeholder" />
-				)}
+	const content =
+		title || abstract ? (
+			<div className="accordion-item">
+				<div className="accordion-item-image-wrapper">
+					{imageUrl ? (
+						<img
+							src={imageUrl}
+							alt={title || ""}
+							className="accordion-item-image"
+						/>
+					) : (
+						<div className="accordion-item-image-placeholder" />
+					)}
+				</div>
+				<div className="accordion-item-content">
+					{title && (
+						<h3 className="accordion-item-headline">{title}</h3>
+					)}
+					{abstract && (
+						<p className="accordion-item-paragraph truncate-multiline">
+							{abstract}
+						</p>
+					)}
+				</div>
 			</div>
-			<div className="accordion-item-content">
-				{title && <h3 className="accordion-item-headline">{title}</h3>}
-				{abstract && (
-					<p className="accordion-item-paragraph truncate-multiline">
-						{abstract}
-					</p>
-				)}
-			</div>
-		</div>
-	) : children ? (
-		<div className="accordion-item">{children}</div>
-	) : null;
+		) : children ? (
+			<div className="accordion-item">{children}</div>
+		) : null;
 
 	if (!content) {
 		return null;

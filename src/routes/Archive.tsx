@@ -1,9 +1,9 @@
+import { useMemo } from "react";
 import { Accordion, AccordionItem } from "../components/accordion";
 import { Footer, Header } from "../components/layout";
-import { useSettings } from "../context/settingsContext";
-import { categories, categoryConfig, type Category } from "../hooks/useFetch";
-import { useMemo } from "react";
 import { useSearch } from "../context/searchContext";
+import { useSettings } from "../context/settingsContext";
+import { type Category, categories, categoryConfig } from "../hooks/useFetch";
 import { useSearchByCategory } from "../hooks/useSearch";
 
 export default function Archive() {
@@ -16,8 +16,10 @@ export default function Archive() {
 			| MostPopularResult
 		)[];
 
-		const grouped: Record<string, (TopStoriesResult | MostPopularResult)[]> =
-			{};
+		const grouped: Record<
+			string,
+			(TopStoriesResult | MostPopularResult)[]
+		> = {};
 
 		for (const item of archiveItems) {
 			const itemSection = item.section.toLowerCase();
@@ -67,7 +69,7 @@ export default function Archive() {
 				{filteredResults.map(({ category, items }) => (
 					<Accordion key={category} title={category}>
 						{items
-							.filter((item) => item.title && item.title.trim())
+							.filter((item) => item.title?.trim())
 							.map((item) => {
 								let imageUrl: string | undefined;
 								if ("multimedia" in item && item.multimedia) {
@@ -80,7 +82,9 @@ export default function Archive() {
 									const mediaItem = item.media.find(
 										(m: NYTMedia) => m.type === "image",
 									);
-									const metadata = mediaItem?.["media-metadata"]?.find(
+									const metadata = mediaItem?.[
+										"media-metadata"
+									]?.find(
 										(m: NYTMediaMetadata) =>
 											m.format === "mediumThreeByTwo210",
 									);
@@ -93,7 +97,9 @@ export default function Archive() {
 										title={item.title}
 										abstract={item.abstract}
 										imageUrl={imageUrl}
-										onAction={() => removeFromArchive(item.uri)}
+										onAction={() =>
+											removeFromArchive(item.uri)
+										}
 									/>
 								);
 							})}

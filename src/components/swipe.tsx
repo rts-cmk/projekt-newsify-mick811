@@ -150,7 +150,9 @@ export const SwipeToReveal = forwardRef<
 						type="button"
 						className="swipe-action-btn"
 						onClick={handleAction}
-						aria-label={type === "delete" ? "Delete item" : "Bookmark item"}
+						aria-label={
+							type === "delete" ? "Delete item" : "Bookmark item"
+						}
 						tabIndex={tx < 0 ? 0 : -1}
 					>
 						{type === "delete" ? <DeleteIcon /> : <BookmarkIcon />}

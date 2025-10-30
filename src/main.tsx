@@ -3,17 +3,17 @@ import { QueryClient } from "@tanstack/react-query";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, redirect, Outlet } from "react-router";
+import { createBrowserRouter, Outlet, redirect } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import App from "./App";
-import { SettingsProvider, getSettings } from "./context/settingsContext";
 import { SearchProvider } from "./context/searchContext";
+import { getSettings, SettingsProvider } from "./context/settingsContext";
 import Onboarding from "./routes/Onboarding";
 import Settings from "./routes/Settings";
 import "./styles/main.scss";
+import Archive from "./routes/Archive";
 import Login from "./routes/Login";
 import Popular from "./routes/Popular";
-import Archive from "./routes/Archive";
 
 const router = createBrowserRouter([
 	{
