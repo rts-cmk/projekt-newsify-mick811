@@ -4,11 +4,10 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, redirect, Outlet } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import App from "./App";
-import { Spinner } from "./components/spinner";
-import { SettingsProvider } from "./context/settingsContext";
+import { SettingsProvider, getSettings } from "./context/settingsContext";
 import { SearchProvider } from "./context/searchContext";
 import Onboarding from "./routes/Onboarding";
 import Settings from "./routes/Settings";
@@ -19,36 +18,42 @@ import Archive from "./routes/Archive";
 
 const router = createBrowserRouter([
 	{
-		// this element is shown while the route is loading data
-		hydrateFallbackElement: (
-			<div className="fallback">
-				<Spinner />
-			</div>
-		),
+		element: <Outlet />,
 		children: [
-			{
-				path: "/",
-				element: <App />,
-			},
-			{
-				path: "/popular",
-				element: <Popular />,
-			},
-			{
-				path: "/archive",
-				element: <Archive />,
-			},
-			{
-				path: "/settings",
-				element: <Settings />,
-			},
 			{
 				path: "/onboarding",
 				element: <Onboarding />,
 			},
 			{
-				path: "/login",
-				element: <Login />,
+				loader: () => {
+					const settings = getSettings();
+					if (settings.showOnboarding) {
+						throw redirect("/onboarding");
+					}
+					return null;
+				},
+				children: [
+					{
+						path: "/login",
+						element: <Login />,
+					},
+					{
+						path: "/",
+						element: <App />,
+					},
+					{
+						path: "/popular",
+						element: <Popular />,
+					},
+					{
+						path: "/archive",
+						element: <Archive />,
+					},
+					{
+						path: "/settings",
+						element: <Settings />,
+					},
+				],
 			},
 		],
 	},

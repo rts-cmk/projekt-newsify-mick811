@@ -21,6 +21,20 @@ const defaultSettings: UserSettings = {
 	},
 };
 
+// Helper function to get settings from localStorage (can be used in loaders)
+export const getSettings = (): UserSettings => {
+	const rawSettings = localStorage.getItem("user_settings");
+	if (!rawSettings) return defaultSettings;
+	try {
+		return {
+			...defaultSettings,
+			...(JSON.parse(rawSettings) as UserSettings),
+		};
+	} catch {
+		return defaultSettings;
+	}
+};
+
 export const SettingsContext = createContext({
 	settings: defaultSettings,
 	updateSettings: (_values: UserSettings) => {},

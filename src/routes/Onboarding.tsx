@@ -31,7 +31,7 @@ export default function Onboarding() {
 
 	const completeOnboarding = () => {
 		updateSettings({ ...settings, showOnboarding: false });
-		navigate("/");
+		navigate("/login");
 	};
 
 	const handleContinue = () => {
