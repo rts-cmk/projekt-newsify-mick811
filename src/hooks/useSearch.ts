@@ -18,9 +18,11 @@ interface SearchableItem {
 	media?: NYTMedia[];
 }
 
+type SearchableItemType = TopStoriesResult | MostPopularResult;
+
 interface SearchResult {
 	category: Category;
-	items: SearchableItem[];
+	items: SearchableItemType[];
 }
 
 const fuseOptions = {
@@ -60,7 +62,7 @@ export const useSearch = (
 export const useSearchByCategory = (
 	results: Array<{
 		category: Category;
-		data?: { results: SearchableItem[] };
+		data?: { results: SearchableItemType[] };
 	}>,
 	searchQuery: string,
 ): SearchResult[] => {
@@ -72,7 +74,7 @@ export const useSearchByCategory = (
 						r,
 					): r is {
 						category: Category;
-						data: { results: SearchableItem[] };
+						data: { results: SearchableItemType[] };
 					} => !!r.data?.results?.length,
 				)
 				.map((r) => ({
@@ -81,7 +83,7 @@ export const useSearchByCategory = (
 				}));
 		}
 
-		const searchableItems: Array<SearchableItem & { category: Category }> =
+		const searchableItems: Array<SearchableItemType & { category: Category }> =
 			[];
 		for (const result of results) {
 			if (result.data?.results) {
@@ -97,8 +99,8 @@ export const useSearchByCategory = (
 		const fuse = new Fuse(searchableItems, fuseOptions);
 		const fuseResults = fuse.search(searchQuery);
 
-		const groupedByCategory: Record<Category, SearchableItem[]> =
-			{} as Record<Category, SearchableItem[]>;
+		const groupedByCategory: Record<Category, SearchableItemType[]> =
+			{} as Record<Category, SearchableItemType[]>;
 
 		for (const result of fuseResults) {
 			const category = result.item.category;
@@ -110,7 +112,7 @@ export const useSearchByCategory = (
 			}
 			// Remove category from item before adding
 			const { category: _, ...itemWithoutCategory } = result.item;
-			groupedByCategory[category].push(itemWithoutCategory);
+			groupedByCategory[category].push(itemWithoutCategory as SearchableItemType);
 		}
 
 		return Object.entries(groupedByCategory).map(([category, items]) => ({
