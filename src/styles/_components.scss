@@ -264,17 +264,21 @@
     }
 }
 
+.main-container {
+    padding-bottom: 100px;
+}
+
 .accordion {
     margin: 0;
     padding: 0;
     border-top: 1px solid theme.color("border");
     padding: 16px;
 
-    &[open] .accordion-title svg {
+    &[open] .accordion-title .accordion-title-icon {
 		transform: rotate(90deg);
 	}
 
-    .accordion-title svg {
+    .accordion-title .accordion-title-icon {
 		transition: transform 0.3s ease;
 	}
 

@@ -25,7 +25,8 @@ export function Accordion({ title, children }: AccordionProps) {
 					strokeWidth="2"
 					strokeLinecap="round"
 					strokeLinejoin="round"
-                    aria-hidden="true"
+					aria-hidden="true"
+					className="accordion-title-icon"
 				>
 					<path d="m9 18 6-6-6-6" />
 				</svg>
@@ -70,7 +71,7 @@ export function AccordionItem({
 
 function AccordionIcon() {
 	return (
-		<span className="accordion-title-icon">
+		<span>
 			<svg
 				width="24"
 				height="24"
