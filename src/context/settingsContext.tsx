@@ -1,5 +1,5 @@
 import type React from "react";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 export type UserSettings = {
 	theme: "light" | "dark";
@@ -52,6 +52,20 @@ export const SettingsProvider = ({
 	const [currentSettings, setCurrentSettings] = useState(
 		settings || defaultSettings,
 	);
+
+	useEffect(() => {
+		const theme = (settings || defaultSettings).theme;
+		const html = document.documentElement;
+		const body = document.body;
+
+		if (theme === "dark") {
+			html.classList.add("dark");
+			body.classList.add("dark");
+		} else {
+			html.classList.remove("dark");
+			body.classList.remove("dark");
+		}
+	}, []);
 
 	const updateSettings = (values: UserSettings) => {
 		window.localStorage.setItem("user_settings", JSON.stringify(values));

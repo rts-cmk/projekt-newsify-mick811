@@ -1,5 +1,6 @@
 import { Footer, Header } from "../components/layout";
 import { useSettings } from "../context/settingsContext";
+import { useTheme } from "../hooks/useTheme";
 
 const CategoryIcon = () => (
 	<svg
@@ -67,6 +68,7 @@ const CategoryIcon = () => (
 
 export default function Settings() {
 	const { settings, updateSettings } = useSettings();
+	const { theme, toggleTheme } = useTheme();
 
 	const handleCategoryChange = (category: string) => {
 		const updatedCategories = {
@@ -110,14 +112,9 @@ export default function Settings() {
 					type="button"
 					data-outline-secondary="true"
 					className="theme-toggle-button"
-					onClick={() =>
-						updateSettings({
-							...settings,
-							theme: settings.theme === "light" ? "dark" : "light",
-						})
-					}
+					onClick={toggleTheme}
 				>
-					Toggle {settings.theme === "light" ? "dark" : "light"} mode
+					Toggle {theme === "light" ? "dark" : "light"} mode
 				</button>
 
 				<p className="settings-version">Version 4.8.15.16.23.42</p>
