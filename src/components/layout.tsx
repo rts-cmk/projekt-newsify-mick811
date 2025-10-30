@@ -1,4 +1,5 @@
 import { NavLink } from "react-router";
+import { useSearch } from "../context/searchContext";
 
 function Icon() {
 	return (
@@ -73,6 +74,8 @@ interface HeaderProps {
 }
 
 export const Header = ({ search = false }: HeaderProps) => {
+	const { searchQuery, setSearchQuery } = useSearch();
+
 	return (
 		<header className="header">
 			<div className="header-title">
@@ -85,6 +88,9 @@ export const Header = ({ search = false }: HeaderProps) => {
 						type="text"
 						className="header-search-input"
 						placeholder="Search news"
+						value={searchQuery}
+						onChange={(e) => setSearchQuery(e.target.value)}
+						aria-label="Search news articles"
 					/>
 				</div>
 			)}

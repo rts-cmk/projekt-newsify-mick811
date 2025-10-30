@@ -9,6 +9,7 @@ import { RouterProvider } from "react-router/dom";
 import App from "./App";
 import { Spinner } from "./components/spinner";
 import { SettingsProvider } from "./context/settingsContext";
+import { SearchProvider } from "./context/searchContext";
 import Onboarding from "./routes/Onboarding";
 import Settings from "./routes/Settings";
 import "./styles/main.scss";
@@ -74,7 +75,9 @@ ReactDOM.createRoot(root).render(
 			persistOptions={{ persister }}
 		>
 			<SettingsProvider>
-				<RouterProvider router={router} />
+				<SearchProvider>
+					<RouterProvider router={router} />
+				</SearchProvider>
 			</SettingsProvider>
 			<ReactQueryDevtools />
 		</PersistQueryClientProvider>
