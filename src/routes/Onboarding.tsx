@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router";
 import { Stepper } from "../components/stepper";
 import { useSettings } from "../context/settingsContext";
+import { useTheme } from "../hooks/useTheme";
 
 const onboarding = [
 	{
@@ -25,6 +26,7 @@ export default function Onboarding() {
 	const [currentStep, setCurrentStep] = useState(0);
 
 	const { settings, updateSettings } = useSettings();
+	const { theme } = useTheme();
 	const navigate = useNavigate();
 
 	const completeOnboarding = () => {
@@ -48,7 +50,7 @@ export default function Onboarding() {
 		<div className="onboarding-container">
 			<figure>
 				<img
-					src={`/assets/onboarding-image-${currentStep}.svg`}
+					src={`/assets/onboarding-image-${theme}-${currentStep}.svg`}
 					alt="Onboarding Illustration"
 					className="onboarding-image"
 				/>
