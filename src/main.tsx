@@ -13,6 +13,7 @@ import Onboarding from "./routes/Onboarding";
 import Settings from "./routes/Settings";
 import "./styles/main.scss";
 import Login from "./routes/Login";
+import Popular from "./routes/Popular";
 
 const router = createBrowserRouter([
 	{
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
 				element: <App />,
 			},
 			{
+				path: "/popular",
+				element: <Popular />,
+			},
+			{
 				path: "/settings",
 				element: <Settings />,
 			},
@@ -35,10 +40,10 @@ const router = createBrowserRouter([
 				path: "/onboarding",
 				element: <Onboarding />,
 			},
-            {
-                path: "/login",
-                element: <Login />,
-            }
+			{
+				path: "/login",
+				element: <Login />,
+			},
 		],
 	},
 ]);

@@ -42,6 +42,10 @@ body.dark {
 }
 
 body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
     background: color("background");
     color: color("text-foreground-primary");
     border-color: color("border");

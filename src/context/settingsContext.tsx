@@ -15,7 +15,7 @@ const defaultSettings: UserSettings = {
 	categories: {
 		europe: true,
 		health: true,
-		sport: true,
+		sports: true,
 		business: true,
 		travel: true,
 	},

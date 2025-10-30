@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router";
 
 export default function Login() {
-    const navigate = useNavigate();
+	const navigate = useNavigate();
 
 	return (
 		<div className="auth-container">
@@ -67,49 +67,47 @@ export default function Login() {
 						</clipPath>
 					</defs>
 				</svg>
-                <h1>Newsify</h1>
-                <p>Welcome! Let&apos;s dive into your account!</p>
+				<h1>Newsify</h1>
+				<p>Welcome! Let&apos;s dive into your account!</p>
 			</span>
 
-            <div className="auth-form">
-                <button
-                    type="button"
-                    data-outline-secondary="true"
-                    onClick={() => {
-                        navigate("/")
-                    }}
-                >
-                    Sign in with Facebook
-                </button>
-                <button
-                    type="button"
-                    data-outline-secondary="true"
-                    onClick={() => {
-                        navigate("/")
-                    }}
-                >
-                    Sign in with Google
-                </button>
+			<div className="auth-form">
+				<button
+					type="button"
+					data-outline-secondary="true"
+					onClick={() => {
+						navigate("/");
+					}}
+				>
+					Sign in with Facebook
+				</button>
+				<button
+					type="button"
+					data-outline-secondary="true"
+					onClick={() => {
+						navigate("/");
+					}}
+				>
+					Sign in with Google
+				</button>
 
-                <div className="divider">
-                    <span>or</span>
-                </div>
+				<div className="divider">
+					<span>or</span>
+				</div>
 
-                <button
-                    type="button"
-                    data-shadow="true"
-                    onClick={() => {
-                        navigate("/")
-                    }}
-                >
-                    Sign in with password
-                </button>
-                <p>Don't have an account?{" "}
-                    <Link to={"/"}>
-                        Sign up
-                    </Link>
-                </p>
-            </div>
-        </div>
+				<button
+					type="button"
+					data-shadow="true"
+					onClick={() => {
+						navigate("/");
+					}}
+				>
+					Sign in with password
+				</button>
+				<p>
+					Don't have an account? <Link to={"/"}>Sign up</Link>
+				</p>
+			</div>
+		</div>
 	);
 }

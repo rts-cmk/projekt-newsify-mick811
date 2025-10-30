@@ -96,10 +96,7 @@ export const Footer = () => {
 	return (
 		<footer className="footer">
 			<nav className="nav">
-				<NavLink
-					to="/"
-					className="nav-item"
-				>
+				<NavLink to="/" className="nav-item">
 					<svg
 						width="24"
 						height="24"
@@ -119,10 +116,7 @@ export const Footer = () => {
 
 					<span className="nav-item-label">Home</span>
 				</NavLink>
-				<NavLink
-					to="/archive"
-					className="nav-item"
-				>
+				<NavLink to="/archive" className="nav-item">
 					<svg
 						width="24"
 						height="24"
@@ -142,10 +136,7 @@ export const Footer = () => {
 
 					<span className="nav-item-label">Archive</span>
 				</NavLink>
-				<NavLink
-					to="/popular"
-					className="nav-item"
-				>
+				<NavLink to="/popular" className="nav-item">
 					<svg
 						width="24"
 						height="24"
@@ -163,12 +154,9 @@ export const Footer = () => {
 						/>
 					</svg>
 
-					<span className="footer__nav-item-label">Popular</span>
+					<span className="nav-item-label">Popular</span>
 				</NavLink>
-				<NavLink
-					to="/settings"
-					className="nav-item"
-				>
+				<NavLink to="/settings" className="nav-item">
 					<svg
 						width="24"
 						height="24"
