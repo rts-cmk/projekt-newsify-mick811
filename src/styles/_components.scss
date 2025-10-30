@@ -272,7 +272,6 @@
     margin: 0;
     padding: 0;
     border-top: 1px solid theme.color("border");
-    padding: 16px;
 
     &[open] .accordion-title .accordion-title-icon {
 		transform: rotate(90deg);
@@ -286,6 +285,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 16px;
 
         &-text {
             display: flex;
@@ -307,27 +307,28 @@
         display: flex;
         align-items: center;
         gap: 16px;
-        padding: 16px 0;
+        padding-top: 16px;
+        padding-bottom: 16px;
         border-top: 1px solid theme.color("border");
-
-        &-image {
-            flex-shrink: 0;
-            width: 80px;
-            height: 80px;
-            border-radius: 8px;
-            object-fit: cover;
-            background: color-mix(in srgb, theme.color("border"), transparent 50%);
-        }
 
         &-image-wrapper {
             flex-shrink: 0;
             width: 80px;
             height: 80px;
+            padding-left: 16px;
+        }
+
+        &-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            background: color-mix(in srgb, theme.color("border"), transparent 50%);
         }
 
         &-image-placeholder {
-            width: 80px;
-            height: 80px;
+            width: 100%;
+            height: 100%;
             border-radius: 8px;
             background: color-mix(in srgb, theme.color("border"), transparent 50%);
         }
@@ -338,6 +339,7 @@
             flex-direction: column;
             gap: 8px;
             min-width: 0;
+            padding-right: 16px;
         }
 
         &-headline {
