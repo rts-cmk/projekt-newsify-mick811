@@ -116,7 +116,7 @@ export const SwipeToReveal = forwardRef<
 				setRevealedSafe(nextRevealed);
 				setTx(nextRevealed ? -revealWidth : 0);
 			},
-			preventScrollOnSwipe: true,
+			preventScrollOnSwipe: false,
 			trackMouse: true,
 			delta: 5,
 		});
@@ -165,7 +165,7 @@ export const SwipeToReveal = forwardRef<
 						transition: dragging.current
 							? "none"
 							: "transform 180ms ease",
-						touchAction: "pan-y",
+						touchAction: "pan-x pan-y",
 						userSelect: "none",
 					}}
 				>

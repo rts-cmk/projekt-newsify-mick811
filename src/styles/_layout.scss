@@ -10,10 +10,15 @@
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
+    touch-action: manipulation;
 
 	&:hover {
 		background: color-mix(in srgb, theme.color("primary"), transparent 20%);
 	}
+
+    &:active {
+        opacity: 0.9;
+    }
 }
 
 [data-default] {
@@ -37,10 +42,15 @@
     color: theme.color("text-foreground-primary");
     border-color: theme.color("border");
     width: 345px;
+    touch-action: manipulation;
 
     &:hover {
         background: none;
         border-color: color-mix(in srgb,  theme.color("border"), transparent 20%);
+    }
+
+    &:active {
+        opacity: 0.8;
     }
 }
 

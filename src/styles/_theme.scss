@@ -21,34 +21,53 @@ $theme-colors-dark: (
 );
 
 @function color($name) {
-    $light: map.get($theme-colors-light, $name);
-    $dark: map.get($theme-colors-dark, $name);
-    @return light-dark($light, $dark);
+    @return var(--theme-#{$name});
+}
+
+@mixin theme-vars($colors) {
+    @each $name, $value in $colors {
+        --theme-#{$name}: #{$value};
+    }
 }
 
 :root {
     color-scheme: light dark;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    @include theme-vars($theme-colors-light);
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not(.light):not(.dark) {
         color-scheme: dark;
+        @include theme-vars($theme-colors-dark);
     }
 }
 
 html.dark,
 body.dark {
     color-scheme: dark;
+    @include theme-vars($theme-colors-dark);
+}
+
+html.light,
+body.light {
+    color-scheme: light;
+    @include theme-vars($theme-colors-light);
 }
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
-    background: color("background");
-    color: color("text-foreground-primary");
-    border-color: color("border");
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    background: var(--theme-background);
+    color: var(--theme-text-foreground-primary);
+    border-color: var(--theme-border);
 
     @media (min-width: 800px) {
         max-width: 750px;

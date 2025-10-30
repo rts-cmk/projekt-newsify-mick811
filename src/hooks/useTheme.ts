@@ -11,11 +11,15 @@ export const useTheme = () => {
 		const body = document.body;
 
 		if (theme === "dark") {
+			html.classList.remove("light");
 			html.classList.add("dark");
+			body.classList.remove("light");
 			body.classList.add("dark");
 		} else {
 			html.classList.remove("dark");
+			html.classList.add("light");
 			body.classList.remove("dark");
+			body.classList.add("light");
 		}
 	}, [theme]);
 
