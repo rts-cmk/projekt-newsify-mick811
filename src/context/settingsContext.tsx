@@ -24,6 +24,7 @@ const defaultSettings: UserSettings = {
 export const SettingsContext = createContext({
 	settings: defaultSettings,
 	updateSettings: (_values: UserSettings) => {},
+	addToArchive: (_item: any) => {},
 });
 
 export const SettingsProvider = ({
@@ -56,9 +57,21 @@ export const SettingsProvider = ({
 		setCurrentSettings(values);
 	};
 
+	const addToArchive = (item: TopStoriesResult | MostPopularResult) => {
+		const updatedArchive = {
+			...currentSettings.archive,
+			[item.uri]: item,
+		};
+		const updatedSettings = {
+			...currentSettings,
+			archive: updatedArchive,
+		};
+		updateSettings(updatedSettings);
+	};
+
 	return (
 		<SettingsContext.Provider
-			value={{ settings: currentSettings, updateSettings }}
+			value={{ settings: currentSettings, updateSettings, addToArchive }}
 		>
 			{children}
 		</SettingsContext.Provider>

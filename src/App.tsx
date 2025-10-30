@@ -1,9 +1,11 @@
 import { Accordion, AccordionItem } from "./components/accordion";
 import { Footer, Header } from "./components/layout";
 import { useFetchAllCategories } from "./hooks/useFetch";
+import { useSettings } from "./context/settingsContext";
 
 export default function App() {
 	const results = useFetchAllCategories("topstories");
+	const { addToArchive } = useSettings();
 
 	return (
 		<>
@@ -40,6 +42,7 @@ export default function App() {
 											title={item.title}
 											abstract={item.abstract}
 											imageUrl={imageUrl}
+											onAction={() => addToArchive(item)}
 										/>
 									);
 								})}
