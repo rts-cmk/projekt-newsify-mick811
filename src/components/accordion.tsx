@@ -81,9 +81,13 @@ export function AccordionItem({
 				)}
 			</div>
 		</div>
-	) : (
+	) : children ? (
 		<div className="accordion-item">{children}</div>
-	);
+	) : null;
+
+	if (!content) {
+		return null;
+	}
 
 	if (!swipe) {
 		return <div className={className}>{content}</div>;
