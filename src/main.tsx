@@ -14,6 +14,7 @@ import Settings from "./routes/Settings";
 import "./styles/main.scss";
 import Login from "./routes/Login";
 import Popular from "./routes/Popular";
+import Archive from "./routes/Archive";
 
 const router = createBrowserRouter([
 	{
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
 			{
 				path: "/popular",
 				element: <Popular />,
+			},
+			{
+				path: "/archive",
+				element: <Archive />,
 			},
 			{
 				path: "/settings",

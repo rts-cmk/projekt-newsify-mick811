@@ -25,6 +25,7 @@ export const SettingsContext = createContext({
 	settings: defaultSettings,
 	updateSettings: (_values: UserSettings) => {},
 	addToArchive: (_item: any) => {},
+	removeFromArchive: (_uri: string) => {},
 });
 
 export const SettingsProvider = ({
@@ -69,9 +70,23 @@ export const SettingsProvider = ({
 		updateSettings(updatedSettings);
 	};
 
+	const removeFromArchive = (uri: string) => {
+		const { [uri]: removed, ...updatedArchive } = currentSettings.archive;
+		const updatedSettings = {
+			...currentSettings,
+			archive: updatedArchive,
+		};
+		updateSettings(updatedSettings);
+	};
+
 	return (
 		<SettingsContext.Provider
-			value={{ settings: currentSettings, updateSettings, addToArchive }}
+			value={{
+				settings: currentSettings,
+				updateSettings,
+				addToArchive,
+				removeFromArchive,
+			}}
 		>
 			{children}
 		</SettingsContext.Provider>

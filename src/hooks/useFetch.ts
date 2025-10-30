@@ -13,7 +13,7 @@ export const categories = [
 
 export type Category = (typeof categories)[number];
 
-const categoryConfig: Record<
+export const categoryConfig: Record<
 	Category,
 	{ apiSection: string; sections: string[] }
 > = {
