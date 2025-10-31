@@ -32,7 +32,7 @@ interface UseFetchProps {
 	category: Category;
 }
 
-const fetchTopStories = async (category: Category, apiKey: string) => {
+export const fetchTopStories = async (category: Category, apiKey: string) => {
 	const { apiSection } = categoryConfig[category];
 	const url = `https://api.nytimes.com/svc/topstories/v2/${apiSection}.json?api-key=${apiKey}`;
 
@@ -42,7 +42,7 @@ const fetchTopStories = async (category: Category, apiKey: string) => {
 	return (await response.json()) as TopStoriesResponse;
 };
 
-const fetchMostPopular = async (category: Category, apiKey: string) => {
+export const fetchMostPopular = async (category: Category, apiKey: string) => {
 	const { sections } = categoryConfig[category];
 
 	const responses = await Promise.all(
