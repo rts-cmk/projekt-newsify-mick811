@@ -35,7 +35,6 @@
 5. [react-swipeable](https://www.npmjs.com/package/react-swipeable), hvilket håndterer swipe gestures på mobile enheder.
 
 ---
-
 ### Argumentation for de valg du selvstændigt har truffet under løsningen af opgaven
 
 (Hvilke overvejelser har du gjort dig, fx. i forbindelse med dit valg af animationer)
