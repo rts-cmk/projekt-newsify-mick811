@@ -94,13 +94,13 @@ export const Header = ({ search = false }: HeaderProps) => {
 					/>
 				</div>
 			)}
-            <figure>
-                <img
-                    src="/nytimes.png"
-                    width={200}
-                    aria-label="Data provided by The New York Times"
-                />
-            </figure>
+			<figure>
+				<img
+					src="/nytimes.png"
+					width={200}
+					aria-label="Data provided by The New York Times"
+				/>
+			</figure>
 		</header>
 	);
 };

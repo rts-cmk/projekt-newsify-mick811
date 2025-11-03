@@ -83,8 +83,9 @@ export const useSearchByCategory = (
 				}));
 		}
 
-		const searchableItems: Array<SearchableItemType & { category: Category }> =
-			[];
+		const searchableItems: Array<
+			SearchableItemType & { category: Category }
+		> = [];
 		for (const result of results) {
 			if (result.data?.results) {
 				for (const item of result.data.results) {
@@ -112,7 +113,9 @@ export const useSearchByCategory = (
 			}
 			// Remove category from item before adding
 			const { category: _, ...itemWithoutCategory } = result.item;
-			groupedByCategory[category].push(itemWithoutCategory as SearchableItemType);
+			groupedByCategory[category].push(
+				itemWithoutCategory as SearchableItemType,
+			);
 		}
 
 		return Object.entries(groupedByCategory).map(([category, items]) => ({
