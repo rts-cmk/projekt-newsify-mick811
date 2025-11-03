@@ -1,0 +1,34 @@
+{
+	"name": "newsify-react",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "tsc -b && vite build",
+		"lint": "eslint .",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@tanstack/query-async-storage-persister": "^5.90.7",
+		"@tanstack/react-query": "^5.90.5",
+		"@tanstack/react-query-persist-client": "^5.90.7",
+		"fuse.js": "^7.1.0",
+		"gsap": "^3.13.0",
+		"react": "^19.1.1",
+		"react-dom": "^19.1.1",
+		"react-router": "^7.9.5",
+		"react-swipeable": "^7.0.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.3.2",
+		"@types/node": "^24.9.2",
+		"@types/react": "^19.1.16",
+		"@types/react-dom": "^19.1.9",
+		"@vitejs/plugin-react": "^5.0.4",
+		"sass-embedded": "^1.93.2",
+		"typescript": "~5.9.3",
+		"typescript-eslint": "^8.45.0",
+		"vite": "^7.1.7"
+	}
+}

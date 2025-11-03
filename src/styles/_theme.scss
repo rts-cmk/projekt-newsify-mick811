@@ -1,0 +1,76 @@
+@use "sass:map";
+
+$theme-colors-light: (
+    "primary": #4D861F,
+    "destructive": #FF5D5D,
+    "text-foreground-primary": #404040,
+    "text-foreground-secondary": #222222,
+    "text-accent": #D9D9D9,
+    "border": #C5C5C5,
+    "background": #FFFFFF,
+);
+
+$theme-colors-dark: (
+    "primary": #46781B,
+    "destructive": #FF5D5D,
+    "text-foreground-primary": #D9D9D9,
+    "text-foreground-secondary": #D9D9D9,
+    "text-accent": #A5A5A5,
+    "border": #C5C5C5,
+    "background": #222222,
+);
+
+@function color($name) {
+    @return var(--theme-#{$name});
+}
+
+@mixin theme-vars($colors) {
+    @each $name, $value in $colors {
+        --theme-#{$name}: #{$value};
+    }
+}
+
+:root {
+    color-scheme: light dark;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    @include theme-vars($theme-colors-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(.light):not(.dark) {
+        color-scheme: dark;
+        @include theme-vars($theme-colors-dark);
+    }
+}
+
+html.dark,
+body.dark {
+    color-scheme: dark;
+    @include theme-vars($theme-colors-dark);
+}
+
+html.light,
+body.light {
+    color-scheme: light;
+    @include theme-vars($theme-colors-light);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    background: var(--theme-background);
+    color: var(--theme-text-foreground-primary);
+    border-color: var(--theme-border);
+
+    @media (min-width: 800px) {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+}

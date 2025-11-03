@@ -1,0 +1,5 @@
+[serve.static]
+
+[install]
+auto = "fallback"
+saveTextLockfile = false

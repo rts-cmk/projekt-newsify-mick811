@@ -1,0 +1,85 @@
+@use "theme" as theme;
+
+%button-base {
+    width: 166px;
+    height: 62px;
+	background: theme.color("primary");
+	color: #fff;
+	border: 1px solid theme.color("primary");
+	border-radius: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    touch-action: manipulation;
+
+	&:hover {
+		background: color-mix(in srgb, theme.color("primary"), transparent 20%);
+	}
+
+    &:active {
+        opacity: 0.9;
+    }
+}
+
+[data-default] {
+	@extend %button-base;
+}
+
+[data-outline] {
+    @extend %button-base;
+    background: transparent;
+    color: theme.color("primary");
+
+    &:hover {
+        background: none;
+        border-color: color-mix(in srgb,  theme.color("primary"), transparent 20%);
+    }
+}
+
+[data-outline-secondary] {
+    @extend %button-base;
+    background: transparent;
+    color: theme.color("text-foreground-primary");
+    border-color: theme.color("border");
+    width: 345px;
+    touch-action: manipulation;
+
+    &:hover {
+        background: none;
+        border-color: color-mix(in srgb,  theme.color("border"), transparent 20%);
+    }
+
+    &:active {
+        opacity: 0.8;
+    }
+}
+
+[data-shadow] {
+	@extend %button-base;
+    width: 345px;
+	box-shadow: 0 2px 8px color-mix(in srgb, theme.color("primary"), transparent 70%);
+    font-size: 16px;
+}
+
+%truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+%truncate-multiline {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.truncate {
+    @extend %truncate;
+}
+
+.truncate-multiline {
+    @extend %truncate-multiline;
+}
